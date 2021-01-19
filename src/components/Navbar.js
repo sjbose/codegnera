@@ -15,7 +15,7 @@ const Navigation = styled.nav`
     border-bottom: 1px solid #33333320;
     margin: 0 auto;
     padding: 0 5vw;
-    z-index: 2;
+    z-index: 10;
     align-self: center;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
 
@@ -45,6 +45,7 @@ const Navbox = styled.div`
     height: 100%;
     justify-content: flex-end;
     align-items: center;
+    
 
     @media (max-width: 768px) {
         flex-direction: column;

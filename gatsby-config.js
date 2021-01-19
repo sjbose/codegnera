@@ -1,4 +1,4 @@
-// const path = require(`path`)
+const path = require(`path`)
 module.exports = {
     siteMetadata: {
         title: `Codegenera`,
@@ -19,10 +19,11 @@ module.exports = {
         },
         `gatsby-plugin-react-helmet`,
         {
-            resolve: `gatsby-source-filesystem`,
+            resolve: 'gatsby-source-filesystem',
             options: {
                 name: `images`,
-                path: `${__dirname}/src/assets/images`,
+                path: path.join(__dirname, `src`, `assets`, `images`),
+                // path: `${__dirname}/src/assets/images`,
             },
         },
         `gatsby-transformer-sharp`,
@@ -44,8 +45,15 @@ module.exports = {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
                 fonts: [
-                    `Quicksand\:300,400,500,600,700`, `Roboto mono`, `Montserrat\: 500,600,700,900`,
-                    `Pacifico\:300,400,500,600,700` // you can also specify font weights and styles
+                    `Quicksand\:300,400,500,600,700`, `Roboto mono`, `Montserrat\: 300,500,600,700,900`,
+                    `Pacifico\:300,400,500,600,700`, `Raleway\:200,300,400,500,600,700,800,900`,
+                    `Lato\:300,400,700,900`,
+                    `Saira+Extra+Condensed\:100,200,300,400,500,600,700,800,900`,
+                    `Saira\:100,200,300,400,500,600,700,800,900`,
+                    `Chivo\:300,400,700,900`,
+                    `Comfortaa\:300,400,500,600,700`,
+                    `Patua+One`
+                    // you can also specify font weights and styles
                 ],
                 display: 'swap'
             }

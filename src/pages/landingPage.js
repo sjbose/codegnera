@@ -1,81 +1,90 @@
 import React from 'react';
 import styled from 'styled-components';
-import OnRocket from '../assets/images/Onrocket.svg'
+import OnRocket from '../assets/images/OnRocket_mob3.svg';
+import { Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
+const BannerImg = styled.img`
+        display:flex,
+        flex:40%,
+        max-width:100%;
+        width:100%;
+        height:600px;
+        align-items:center;
+        justify-content:center,
 
-
-
-const Hero = styled.div`
-display:flex;
-flex-flow:row nowrap;
-justify-content: space-around;
-@media(max-width:1000){}
-@media(max-width:600){
-    display:block;
-    position: relative;
-}
-@media(max-width:400){
-    display:block;
-    position: relative;xx
-}
-    h1{
-        font:normal 900 5em/1 'Montserrat', sans-serif;
-        text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-        padding:1.5em 0 0 1em;
-        
-        @media(max-width:1000){
-            font:normal 900 5em/1 'Montserrat', sans-serif;
-        text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-        padding:1.5em 0 0 1em;
-        }
         @media(max-width:600){
-            font:normal 900 5em/1 'Montserrat', sans-serif;
-        text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-        padding:1.5em 0 0 1em;
+        width:600px;
+        height:600px;
+        
         }
         @media(max-width:400){
-            font:normal 700 1rem/1 'Montserrat', sans-serif;
-        text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-            padding:0;
+        
         }
-    }
-    img{
-        flex-direction:
-        width:995px;
-        height:700px;
-        @media(max-width: 1000px){
-            width:995px;
-            height:700px;
-        }
-        @media(max-width:600px){
-            width:569px;
-            height:400px;
-            position: absolute;
-        }
-        @media(max-width: 400px){
-            width:100%;
-            height:250;
-            position: absolute;
-        }
-
-}
 `;
 
 
+const useStyle = makeStyles(theme => ({
+    root: {
+        flexGrow: 1,
+        fontSize: '2rem',
+        height: '700px'
+    },
+    gridContainer: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        [theme.breakpoints.down('sm')]: {
+            // flexDirection: 'column-reverse',
+        },
+        [theme.breakpoints.down('md')]: {
+            // flexDirection: 'column-reverse',
+        },
+        [theme.breakpoints.down('lg')]: {},
+    },
+    typographyStyle: {
+        // fontFamily: 'Montserrat',
+        // fontWeight: 900,
+        // fontStyle: 'normal',
+        // fontSize: '2.5em',
+        font: `normal 900 3.5em/ 1 'Montserrat', sans- serif`,
 
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '2rem',
 
-const LandingPage = () => {
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize: '2.5rem',
+            textAlign: 'center'
+        },
 
+    }
+}))
+
+const LandingPage = (props) => {
+
+    const classes = useStyle(props);
     return (
 
-        <Hero>
+        <div className={classes.root}>
+            <Grid container justify="center" className={classes.gridContainer}>
 
-            <h1>Let people know about your business</h1>
+                <Grid item lg={6} xs={12} sm={12} md={6} >
+                    <BannerImg src={OnRocket} alt="banner image" />
+                </Grid>
+                <Grid item lg={6} xs={12} sm={12} md={6} >
 
-            <img src={OnRocket} alt="OnRocket" />
+                    <Typography variant='h3' className={classes.typographyStyle} >Let people know about your business</Typography>
+
+                </Grid>
 
 
-        </Hero>
+            </Grid  >
+        </div>
+
+
+
+
 
     )
 }

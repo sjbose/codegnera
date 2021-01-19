@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import bckimg from './../assets/images/bg.svg';
+// import bckimg from './../assets/images/newbg.svg';
 
 const GlobalStyles = createGlobalStyle`
     :root{
@@ -14,10 +14,7 @@ const GlobalStyles = createGlobalStyle`
     }
     html {
         font-size: 2vw;
-        // background-image: url(${bckimg});
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
+
     }
 `;
 export default GlobalStyles;

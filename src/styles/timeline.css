@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i,900,900i|Saira+Extra+Condensed:100,200,300,400,500,600,700,800|Saira:100,200,300,400,500,600,700,800');
+/* .skills .container .row  p {
+  font-weight: 300;
+}
+
+
+.timeline .event  h1 {
+  font-family: 'Saira', sans-serif;
+  letter-spacing: 1.5px;
+  color: rgb(167, 59, 59);
+  font-weight: 400;
+  font-size: 2.4em;
+} */
+.skills{
+    background:#F0F0F3;
+}
+.skills_title{
+  font: normal 300 2.8rem/1 var(--roboto);
+}
+strong {
+  font-weight: 600;
+}
+#timeline-content {
+  margin-top: 50px;
+  text-align: center;
+}
+/* Timeline */
+.timeline {
+  border-left: 4px solid #004ffc;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgb(97, 97, 97);
+  font-family: 'Chivo', sans-serif;
+  margin: 50px 20px;
+  letter-spacing: 0.5px;
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  padding: 50px;
+  list-style: none;
+  text-align: left;
+  font-weight: 100;
+  max-width: 30%;
+}
+[data-date]{
+  font-size:16px;
+}
+.timeline h1 {
+  font-family: 'Saira', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  font-size: 1.4em;
+}
+.timeline h2,
+.timeline h3 {
+  font-family: 'Saira', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  font-size: 1.4em;
+}
+.timeline .event {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  width: 220px;
+  padding: 0 0 0 25px;
+  margin-bottom: 50px;
+  position: relative;
+  
+}
+.timeline .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+.timeline .event:before,
+.timeline .event:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+.timeline .event:before {
+  left: -217.5px;
+  color: rgb(97, 97, 97);
+  content: attr(data-date);
+  text-align: right;
+  font-weight: 100;
+  font-size: 0.9em;
+  min-width: 120px;
+  font-family: 'Saira', sans-serif;
+}
+.timeline .event:after {
+  box-shadow: 0 0 0 4px #004ffc;
+  left: -57.85px;
+  background: #313534;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  content: "";
+  top: 5px;
+}
+.badge-wrapper{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:space-between;
+    
+}
+.badge{
+    width:60px;
+    height: 60px;
+    position: relative;
+
+  background: #f1f3f6;
+  border-radius: 50%;
+  box-shadow: 
+    inset 0 0 15px rgba(55, 84, 170, 0), 
+    inset 0 0 20px rgba(255, 255, 255, 0), 
+    10px 10px 18px rgba(55, 84, 170, 0.15), 
+    -10px -10px 22px white, 
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2);
+  transition: 0.7s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  font-size: 0;
+  transition:all ease-in-out 0.4s;
+}
+.badge:hover, .badge:focus {
+    /* box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2); */
+    
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  16px 16px 21px #dbdbdb, 
+            -16px -16px 21px #ffffff;
+}
+.badge img{
+    width: 40px;
+    height: 40px;
+}
+.badge img:hover{
+    transform: scale(0.9233);
+}
+.htmlCss{
+  width:220px;
+    height: 117px;
+    position: relative;
+
+  background: #f1f3f6;
+  border-radius: 10px;
+  /* box-shadow: 
+    inset 0 0 15px rgba(55, 84, 170, 0), 
+    inset 0 0 20px rgba(255, 255, 255, 0), 
+    10px 10px 18px rgba(55, 84, 170, 0.15), 
+    -10px -10px 22px white, 
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2); */
+    box-shadow: -8px -8px 24px 0 #fff, 8px 8px 24px 0 rgba(174,174,192,0.4);
+  padding:8px;
+  transition: 0.7s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  font-size: 0;
+  transition:all ease-in-out 0.4s;
+}
+.htmlCss img{
+  width: 180px;
+  height: 105px;
+}
+.htmlCss img:hover{
+  transform: scale(0.9233);
+}
+.htmlCss:hover .htmlCss:focus{
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 
+    inset -8px -8px 8px 0 rgba(255,255,255,0.7), 
+    inset 8px 8px 8px 0 rgba(174,174,192,0.2);
+
+}
