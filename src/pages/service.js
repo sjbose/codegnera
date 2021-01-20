@@ -13,15 +13,7 @@ flex: 1 1 auto;
 margin-top:200px;
 margin-right:20px;
 `;
-// const ServiceWrapperTwo = styled.div`
-//     display:flex;
-//     flex-flow:row wrap;
-//     justify-content:space-evenly;
-//     flex: 1 1 auto;
 
-
-
-// `;
 const Service = styled.div`
     
     width:250px;
@@ -30,7 +22,7 @@ const Service = styled.div`
     background:#D1D9E6;
     padding:20px;
     margin-bottom:50px;
-    border-radius:50%;
+    // border-radius:50%;
     
 `;
 // const ServiceTitle = styled.h1``;
@@ -97,13 +89,6 @@ const ServiceOffered = () => {
 
             </ServiceWrapper>
 
-            {/* <ServiceWrapperTwo>
-                <Service></Service>
-                <Service></Service>
-                <Service></Service>
-                <Service></Service>
-
-            </ServiceWrapperTwo> */}
         </>
     )
 }

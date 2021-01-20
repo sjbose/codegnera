@@ -33,6 +33,7 @@ const LineUl = styled.ul`
     text-align: left;
     font-weight: 100;
     max-width: 30%;
+    transition:all 0.3s ease-in;
     h1{
         font-family: 'Saira', sans-serif;
         letter-spacing: 1.5px;
@@ -49,9 +50,7 @@ const LineUl = styled.ul`
         font-size: 1.4em;
     }
 `
-const LineLi = styled.li.attrs(props => ({
-    type: props.type || 'li'
-}))`
+const LineLi = styled.li`
     border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
     width: 220px;
     padding: 0 0 0 25px;
@@ -81,12 +80,14 @@ const LineLi = styled.li.attrs(props => ({
         width: 11px;
         content: "";
         top: 5px;
+
     }
     &:before,&:after{
         position: absolute;
         display: block;
         top: 0;
     }
+
 `
 const BadgeWrapper = styled.div`
     display: flex;
@@ -103,6 +104,7 @@ const ComponentsWrapper = styled.div`
 const Skills = styled.h1`
     font: normal 900 4em/ 1 'Montserrat', sans- serif;
     color:#587370;
+    padding:10px 0 0 10px;
 
 `;
 

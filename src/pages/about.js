@@ -3,9 +3,9 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
+// import Paper from '@material-ui/core/Paper';
 
-
-const useState = makeStyles(theme => ({
+const useStyles = makeStyles(theme => ({
     root: {
         position: 'relative',
         flexGrow: 1,
@@ -41,26 +41,21 @@ const useState = makeStyles(theme => ({
         [theme.breakpoints.down('lg')]: {},
     },
     aboutMeHeading: {
-        fontFamily: 'Montserrat',
-        fontWeight: 500,
-        fontStyle: 'normal',
-        fontSize: '1em',
-
+        font: `normal 400 1.4em/1 'Patua One', cursive;`,
+        lineHeight: '1.6',
 
         [theme.breakpoints.down('sm')]: {
-            fontSize: '0.8rem',
+            fontSize: '1.2em',
 
         },
         [theme.breakpoints.down('md')]: {
-            fontSize: '1rem',
+            fontSize: '1.2em',
             textAlign: 'center'
         },
     },
     aboutMeBody: {
-        fontFamily: 'Montserrat',
-        fontWeight: 300,
-        fontStyle: 'normal',
-        fontSize: '0.7em',
+        font: `normal 300 0.7em/1.2 'Comfortaa', cursive;`,
+        lineHeight: '1.3',
 
 
         [theme.breakpoints.down('sm')]: {
@@ -77,7 +72,7 @@ const useState = makeStyles(theme => ({
 }));
 
 const About = () => {
-    const classes = useState();
+    const classes = useStyles();
     return (
         <div className={classes.root} style={{ padding: 20, marginBottom: 150 }}>
 
@@ -91,18 +86,14 @@ const About = () => {
                     <Typography variant='h3' className={classes.about} > about</Typography>
                     <Typography variant='h3' className={classes.me} > myself</Typography>
                     <Typography variant='h3' className={classes.aboutMeHeading} > A little bit about myself </Typography>
-                    <Typography justify='center' className={classes.aboutMeBody}>Hi I’m Subhajeet bose a software developer based in kolkata. I'm working as a independent developer  for 5 years.I've done work for companies,
-                    consulted for startups,
-                    and collaborated with talented people to create digital
-                    products for both business and consumer use.I love the Web platform and I want to make it better for everyone. And I consider myself to be completely blessed that I get to build it for a living.
-
-                    I have a Bachelor’s Degree in Computer application; but everything I know of and on the Web today is self-taught.
+                    <Typography justify='center' className={classes.aboutMeBody}>Hi I’m Subhajeet bose a software developer based in kolkata. I'm working as a independent developer  for 5 years.I've done work for companies,consulted for startups and collaborated with talented people to create digital products for both business and consumer use.
+                    I love the Web platform and I want to make it better for everyone. And I consider myself to be completely blessed that I get to build it for a living.I have a Bachelor’s Degree in Computer application; but everything I know of and on the Web today is self-taught.
                     I’ve always wanted to study multiple majors because I never wanted to stop learning.
-
                     I’m grateful that I ended up in a field where one of the major requirements for
                     staying relevant is to continuously keep learning
+                        </Typography>
 
-                    </Typography>
+
 
                 </Grid>
 

@@ -10,9 +10,11 @@
   color: rgb(167, 59, 59);
   font-weight: 400;
   font-size: 2.4em;
+  
 } */
 .skills{
     background:#F0F0F3;
+    
 }
 .skills_title{
   font: normal 300 2.8rem/1 var(--roboto);

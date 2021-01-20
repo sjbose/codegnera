@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import LandingPage from '../pages/landingPage';
 import backgroundImg from '../assets/images/newbg.svg';
-import About from './about';
+import About from './about2';
 import Skills from './skills';
 import ServiceOffered from './service';
 
