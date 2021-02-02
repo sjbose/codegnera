@@ -13,21 +13,37 @@ justify-content:space-evenly;
 flex: 1 1 auto;
 margin-top:200px;
 margin-right:20px;
+font-size:2rem;
 `;
 
 const Service = styled.div`
     
     width:300px;
-    height:200px;
+    height:300px;
     position:relative;
-    background:#D1D9E6;
+    background:#ffffff;
     // padding:0;
     margin-bottom:50px;
     // border-radius:50%;
     
 `;
-// const ServiceTitle = styled.h1``;
+const ServiceTitle = styled.h1`
+    font:normal 800 1em/1.2 'Bitter', serif;
+    line-height:1.3;
+    text-transform:capitalize;
+    text-align:center;
 
+`;
+const ServiceContent = styled.p`
+    font:normal 400 0.5em/1.2 'Bitter', serif;
+    line-height:1.3;
+    text-transform:capitalize;
+    text-align:center;
+
+`;
+const ServiceHeader = styled.div`
+padding:20px;
+`;
 
 const ServiceOffered = () => {
 
@@ -42,7 +58,7 @@ const ServiceOffered = () => {
             id
             image {
             title
-                fluid{
+                fluid(maxWidth: 200, maxHeight: 200){
                     ...GatsbyContentfulFluid
                 }
             }
@@ -65,12 +81,15 @@ const ServiceOffered = () => {
                 {data.allContentfulService.edges.map(({ node }) => (
 
                     <Service key={node.id}>
-                        <h4>{node.name}</h4>
-                        <p>{node.description}</p>
+                        <ServiceHeader>
+                            <ServiceTitle>{node.name}</ServiceTitle>
+                            <ServiceContent>{node.description}</ServiceContent>
+                        </ServiceHeader>
+
 
                         <Img
                             fluid={node.image.fluid}
-                            key={node.image.fluid.src}
+                            key={node.id}
                             alt={node.image.title}
                             objectFit="cover"
                             objectPosition="50% 50%"
