@@ -5,7 +5,7 @@ import backgroundImg from '../assets/images/newbg.svg';
 import About from './about2';
 import Skills from './skills';
 import ServiceOffered from './service';
-
+import Contact from './contact';
 
 const WrapperContainer = styled.div`
     background:url(${backgroundImg});
@@ -23,6 +23,7 @@ const index = () => {
             <About />
             <Skills />
             <ServiceOffered />
+            <Contact />
         </WrapperContainer>
     )
 }

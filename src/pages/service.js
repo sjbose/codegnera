@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 // import Img from 'gatsby-image';
 import Img from "gatsby-image/withIEPolyfill";
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby';
+
 
 const ServiceWrapper = styled.div`
 display:flex;
@@ -16,11 +17,11 @@ margin-right:20px;
 
 const Service = styled.div`
     
-    width:250px;
-    height:250px;
+    width:300px;
+    height:200px;
     position:relative;
     background:#D1D9E6;
-    padding:20px;
+    // padding:0;
     margin-bottom:50px;
     // border-radius:50%;
     
@@ -29,69 +30,60 @@ const Service = styled.div`
 
 
 const ServiceOffered = () => {
-    const data = useStaticQuery(graphql`
-    query MyQuery {
-    allFile(filter: {extension: {regex: "/(png)/"}, relativeDirectory: {eq: "serviceImg"}}) {
+
+    const data = useStaticQuery(
+        graphql`
+    query {
+    allContentfulService {
         edges {
         node {
-            childImageSharp {
-            fluid {
-                base64
-                aspectRatio
-                sizes
-                src
-                srcSet
-                originalName
-            }
+            name
+            description
             id
+            image {
+            title
+                fluid{
+                    ...GatsbyContentfulFluid
+                }
             }
         }
         }
     }
     }
+`
+    );
+
+    console.log(data);
 
 
-    `)
-    const generateHexString = (length) => {
-        let ret = "";
-        while (ret.length < length) {
-            ret += Math.random().toString(16).substring(2);
-        }
-        return ret.substring(0, length);
-    }
-
-
-    const serviceImg = {
-        imgStyle: {
-            borderRadius: '50%',
-        }
-    }
 
     return (
-        <>
+        <div>
 
             <ServiceWrapper>
 
-                {data.allFile.edges.map(({ node }) => (
+                {data.allContentfulService.edges.map(({ node }) => (
 
-                    <Service key={generateHexString(5)}>
-                        <Img className={serviceImg.imgStyle} fluid={node.childImageSharp.fluid}
-                            objectFit="cover" objectPosition="50% 50%" />
+                    <Service key={node.id}>
+                        <h4>{node.name}</h4>
+                        <p>{node.description}</p>
+
+                        <Img
+                            fluid={node.image.fluid}
+                            key={node.image.fluid.src}
+                            alt={node.image.title}
+                            objectFit="cover"
+                            objectPosition="50% 50%"
+                        />
 
                     </Service>
 
                 ))}
 
 
-                {/* <Service></Service>
-                <Service></Service>
-                <Service></Service> */}
-
             </ServiceWrapper>
 
-        </>
+        </div>
     )
 }
-
 export default ServiceOffered;
-
