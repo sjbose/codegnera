@@ -20,6 +20,7 @@ module.exports = {
                 disableMinification: false,
             },
         },
+        `gatsby-plugin-smoothscroll`,
         {
             resolve: `gatsby-source-contentful`,
             options: {

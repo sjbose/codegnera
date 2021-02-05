@@ -60,8 +60,8 @@ const about2 = () => {
 
 
     return (
-        <div>
-            <Container>
+        <div id="about">
+            <Container id="about">
                 <ItemOne src={ImageOne} alt="Image">
 
                 </ItemOne>

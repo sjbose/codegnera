@@ -4,7 +4,7 @@ import ContactFrom from '../components/ContactFrom';
 
 const contact = () => {
     return (
-        <div>
+        <div id="contact">
             <ContactFrom />
         </div>
     )

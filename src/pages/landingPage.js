@@ -66,7 +66,7 @@ const LandingPage = (props) => {
     const classes = useStyle(props);
     return (
 
-        <div className={classes.root}>
+        <div className={classes.root} id="home">
             <Grid container justify="center" className={classes.gridContainer}>
 
                 <Grid item lg={6} xs={12} sm={12} md={6} >

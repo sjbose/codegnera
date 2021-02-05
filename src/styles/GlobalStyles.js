@@ -12,6 +12,10 @@ const GlobalStyles = createGlobalStyle`
         padding:0;
 
     }
+    html,
+    body {
+    scroll-behavior: smooth;
+}
     html {
         font-size: 2vw;
 

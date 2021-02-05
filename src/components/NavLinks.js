@@ -1,7 +1,14 @@
 import React from "react";
 import styled from 'styled-components';
 import { Link } from "gatsby";
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
+
+
+// if (typeof window !== "undefined") {
+//     // eslint-disable-next-line global-require
+//     require("smooth-scroll")('a[href*="#"]')
+// }
 
 const NavItem = styled(Link)`
 
@@ -40,14 +47,15 @@ const NavItem = styled(Link)`
         z-index: 6;
     }
 `
+
 const NavbarLinks = () => {
     return (
         <>
-            <NavItem to="/">Home</NavItem>
-            <NavItem to="/">About</NavItem>
-            <NavItem to="/404">Services</NavItem>
+            <NavItem onClick={() => scrollTo('#home')} to="/#home">Home</NavItem>
+            <NavItem onClick={() => scrollTo('#about')} to="/#about">About</NavItem>
+            <NavItem onClick={() => scrollTo('#services')} to="/#services">Services</NavItem>
             <NavItem to="/">Blog</NavItem>
-            <NavItem to="/404">Contact</NavItem>
+            <NavItem onClick={() => scrollTo('#contact')} to="/#contact">Contact</NavItem>
         </>
     )
 }
