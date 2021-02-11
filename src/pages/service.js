@@ -18,21 +18,57 @@ display:flex;
 flex-flow:row wrap;
 justify-content:space-evenly;
 flex: 1 1 auto;
-margin:200px auto 200px auto;
+padding:0 50px;
+margin:100px auto 200px auto;
 // width:100%;
 // max-width:${size.laptoL};
-font-size:1rem
+font-size:1rem;
+
+`;
+const Title = styled.h1`
+    font: normal 900 4em/ 1 'Montserrat', sans- serif;
+    text-align:right;
+    margin-right:100px;
+    background-color: ##587370;
+    background:linear-gradient(165deg, #f02fc2 0%,#6094ea 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    
 `;
 
 
 const Service = styled.div.attrs(props => ({
     className: props.className,
 }))`
+    &.email-template{
+        background:linear-gradient(135deg, #CE9FFC 0%,#7367F0 100%);
+    }
+    &.graphics-design{
+        background:linear-gradient(135deg, #FCDF8A 0%,#E19594 100%);
+
+    }
+    &.cms{
+        background:linear-gradient(180deg, #6A99B5 30%,#08203E 100%);
+
+    }
+    &.website-design{
+        // background:linear-gradient(135deg, #FCDF8A 0%,#E19594 100%);
+        // background:linear-gradient(135deg, #f2d50f 0%,#da0641 100%);
+        background:linear-gradient(135deg, #FF9255 0%,#FF514E 100%);
+    }
+    &.backend{
+        background:linear-gradient(135deg, #c3ec52 0%,#0ba29d 100%);
+    }
+
     margin-bottom:50px;
-    width:300px;
-    height:380px;
+    width:200px;
+    height:280px;
     margin:10px;
     background-color:#99aeff;
+    
     display:inline-block;
     background-size:cover;
     position:relative;
@@ -43,7 +79,7 @@ const Service = styled.div.attrs(props => ({
     color:white;
     font-family:'Roboto';
     border-radius:20px;
-    border:1px solid rgba(187, 186, 186, 0.451);
+    // border:1px solid rgba(187, 186, 186, 0.451);
     // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
 
@@ -125,18 +161,37 @@ const Service = styled.div.attrs(props => ({
         opacity:1;
         transform:translateY(0px);
     }
+    // !Dots synchronization
+    &:hover .dots span:nth-child(1){
+    transition-delay: 0.05s;
+    }
+    &:hover .dots nth-child(2){
+        transition-delay: 0.15s;
+    }
+    &:hover .dots nth-child(3){
+        transition-delay: 0.25s;
+    }
 
 
+
+    // !Media Screens
         @media(max-width:${size.mobileL}) and (min-width:${size.mobileS}){ 
             &:nth-child(even){
                 margin-top:80px;
             }
+
         }
         @media(max-width:${size.mobileL}) and (min-width:${size.mobileS}){ 
             &:nth-child(odd){
                 margin-top:30px;
             }
         }
+        @media(max-width:${size.laptop}) and (min-width:${size.desktop}){
+            &:nth-child(5){
+                margin-top:80px;
+            }
+        }
+        
 
 `;
 
@@ -153,6 +208,7 @@ const ServiceOffered = () => {
             name
             description
             id
+            slug
             image {
             title
             fluid(maxWidth: 300, maxHeight: 200, quality: 100) {
@@ -175,16 +231,16 @@ const ServiceOffered = () => {
 
     return (
         <div id="services">
-
+            <Title>03.Services</Title>
             <ServiceWrapper>
 
                 {data.allContentfulService.edges.map(({ node }) => (
 
-                    <Service key={node.id} className={node.name}>
+                    <Service key={node.id} className={node.slug}>
 
                         <div className="CardContent">
                             <h1>{node.name}</h1>
-                            <h2></h2>
+
                             <p className="animateTxt">{node.description}</p>
 
                             <div className="dots">

@@ -101,19 +101,28 @@ const ComponentsWrapper = styled.div`
     display: flex;
     flex-flow: column nowrap;
 `;
-const Skills = styled.h1`
+const Title = styled.h1`
     font: normal 900 4em/ 1 'Montserrat', sans- serif;
-    color:#587370;
+    text-align:left;
+    // margin-right:100px;
     padding:10px 0 0 10px;
-
+    background-color: ##587370;
+    background:linear-gradient(165deg, #f02fc2 0%,#6094ea 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    
 `;
+
 
 
 
 const TimeLine = (props) => {
     return (
         <div>
-            <Skills>Skills</Skills>
+            <Title>02.Skills</Title>
 
             <LineUl>
                 <LineLi data-event="2021" >
