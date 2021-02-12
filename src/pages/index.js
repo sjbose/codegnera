@@ -5,9 +5,9 @@ import backgroundImg from '../assets/images/newbg.svg';
 // import backgroundImg from '../assets/images/bgblue.svg';
 import About from './about2';
 import Skills from './skills';
-// import ServiceOffered from './service';
-// import Contact from './contact';
-// import Project from './projects';
+import ServiceOffered from './service';
+import Contact from './contact';
+import Project from './projects';
 
 
 const WrapperContainer = styled.div`
@@ -25,9 +25,12 @@ const index = () => {
             <LandingPage />
             <About />
             <Skills />
-            {/* <ServiceOffered /> */}
-            {/* <Project /> */}
-            {/* <Contact /> */}
+            <ServiceOffered />
+            {/* 
+            
+            <Project />
+            <Contact />
+             */}
 
         </WrapperContainer>
     )

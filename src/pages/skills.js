@@ -2,33 +2,42 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TimeLine from '../components/TimeLine';
 import TimeLine2 from '../components/TimeLine2';
+import styled from 'styled-components';
 
 
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        display: 'flex',
-        flexFlow: `row nowrap`,
-        justifyContent: 'space-around',
+const size = {
+    mobileS: '320px',
+    mobileM: '375px',
+    mobileL: '425px',
+    tablet: '768px',
+    laptop: '1024px',
+    laptopL: '1440px',
+    desktop: '2560px'
+}
 
-        [theme.breakpoints.down('sm')]: {
-            flexDirection: 'column',
-        },
-        [theme.breakpoints.down('md')]: {
-            flexDirection: 'column',
-        },
-        [theme.breakpoints.down('lg')]: {},
-    },
+const Container = styled.div`
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-around;
+    padding:100px 50px;
+    @media(max-width:${size.mobileL}) and (min-width:${size.mobileS}){
+        flex-direction: column;
 
-}))
+    }
+        @media(max-width:${size.laptop}) and (min-width:${size.tablet}){
+        flex-direction: row;
+
+    }
+`;
 
 const Skills = () => {
-    const classes = useStyles();
+
     return (
-        <div className={classes.root} >
-            <TimeLine className={classes.timeLine1} />
-            <TimeLine2 className={classes.timeLine2} />
-        </div>
+        <Container >
+            <TimeLine />
+            <TimeLine2 />
+        </Container>
     )
 }
 

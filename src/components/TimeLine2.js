@@ -16,6 +16,19 @@ import Uiux from '../assets/images/timelineIcons/ui.png';
 import '../styles/timeline.css'
 import RectangularBadge from './RectagularBadge';
 
+
+
+
+const size = {
+    mobileS: '320px',
+    mobileM: '375px',
+    mobileL: '425px',
+    tablet: '768px',
+    laptop: '1024px',
+    laptopL: '1440px',
+    desktop: '2560px'
+}
+
 const LineUl = styled.ul`
     border-left: 4px solid #ACBBCA;
     border-bottom-right-radius: 4px;
@@ -23,11 +36,11 @@ const LineUl = styled.ul`
     background: rgba(255, 255, 255, 0.03);
     color: rgb(97, 97, 97);
     font-family: 'Chivo', sans-serif;
-    margin: 50px 20px;
+    
     letter-spacing: 0.5px;
     position: relative;
     line-height: 1.4em;
-    font-size: 1.03em;
+    font-size: 1.13em;
     padding: 50px;
     list-style: none;
     text-align: left;
@@ -47,6 +60,14 @@ const LineUl = styled.ul`
         letter-spacing: 1.5px;
         font-weight: 400;
         font-size: 1.4em;
+    }
+    @media(max-width:${size.mobileL}) and (min-width:${size.mobileS}){
+        font-size:1.33em;
+
+    }
+        @media(max-width:${size.laptop}) and (min-width:${size.tablet}){
+        font-size:1.33em;
+
     }
 `
 const LineLi = styled.li.attrs(props => ({

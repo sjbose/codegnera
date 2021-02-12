@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
     // transition: all 0.4s ease-in-out;
 }
     html {
-        // font-size: 2vw;
+        font-size: 2vw;
 
     }
 `;
