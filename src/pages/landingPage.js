@@ -1,16 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import OnRocket from '../assets/images/OnRocket_mob3.svg';
-import { Grid } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 
+
+const size = {
+    mobileS: '320px',
+    mobileM: '375px',
+    mobileL: '425px',
+    tablet: '768px',
+    laptop: '1024px',
+    laptopL: '1440px',
+    desktop: '2560px'
+}
 const BannerImg = styled.img`
         display:flex,
-        flex:40%,
-        max-width:100%;
-        width:100%;
-        height:600px;
+        
+        // max-width:100%;
+        // width:800px;
+        // height:600px;
         align-items:center;
         justify-content:center,
 
@@ -25,65 +32,65 @@ const BannerImg = styled.img`
 `;
 
 
-const useStyle = makeStyles(theme => ({
-    root: {
-        flexGrow: 1,
-        fontSize: '2rem',
-        height: '700px'
-    },
-    gridContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        [theme.breakpoints.down('sm')]: {
-            // flexDirection: 'column-reverse',
-        },
-        [theme.breakpoints.down('md')]: {
-            // flexDirection: 'column-reverse',
-        },
-        [theme.breakpoints.down('lg')]: {},
-    },
-    typographyStyle: {
-        // fontFamily: 'Montserrat',
-        // fontWeight: 900,
-        // fontStyle: 'normal',
-        // fontSize: '2.5em',
-        font: `normal 900 3.5em/ 1 'Montserrat', sans- serif`,
 
-        [theme.breakpoints.down('sm')]: {
-            fontSize: '2rem',
+const Container = styled.div`
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-around;
+    padding:30px 0;
+    // background:green;
+    flex: 1 1 auto;
 
-        },
-        [theme.breakpoints.down('md')]: {
-            fontSize: '2.5rem',
-            textAlign: 'center'
-        },
-
+    @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+        flex-direction:column;
     }
-}))
+`;
+const TextWrapper = styled.div`
+display:flex;
+flex-flow:column nowrap;
+// background:blue;
 
-const LandingPage = (props) => {
 
-    const classes = useStyle(props);
+@media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+    justify-content:center;
+    }
+
+`;
+const SubWhat = styled.h5`
+font:normal 300 1.8em/ 1 'Saira', sans-serif;
+text-transform:capitalize;
+padding:0 10px 0 200px ;
+
+@media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+    font:normal 500 1.8em/ 1 'Saira', sans-serif;
+    text-align:center;
+    padding:10px;
+    }
+`;
+const SubDev = styled.h3`
+font:normal 900 5.2em/ 1 'Montserrat', sans- serif;
+text-transform:capitalize;
+// padding:0 50px 50px 0;
+padding:0 100px 0 200px;
+
+@media(max-width:${size.laptop}) and (min-width:${size.mobileS}){
+    font:normal 900 3.5em/ 1 'Saira', sans-serif;
+    text-align:center;
+    padding:30px;
+    }
+`;
+const LandingPage = () => {
+
+
     return (
 
-        <div className={classes.root} id="home">
-            <Grid container justify="center" className={classes.gridContainer}>
-
-                <Grid item lg={6} xs={12} sm={12} md={6} >
-                    <BannerImg src={OnRocket} alt="banner image" />
-                </Grid>
-                <Grid item lg={6} xs={12} sm={12} md={6} >
-
-                    <Typography variant='h3' className={classes.typographyStyle} >Let people know about your business</Typography>
-
-                </Grid>
-
-
-            </Grid  >
-        </div>
-
-
-
+        <Container id="home">
+            <BannerImg src={OnRocket} alt="banner image" />
+            <TextWrapper>
+                <SubWhat>What I do</SubWhat>
+                <SubDev>Design, Develop & Create an Identity for your Product</SubDev>
+            </TextWrapper>
+        </Container>
 
 
     )

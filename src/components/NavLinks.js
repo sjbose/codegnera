@@ -51,11 +51,11 @@ const NavItem = styled(Link)`
 const NavbarLinks = () => {
     return (
         <>
-            <NavItem onClick={() => scrollTo('#home')} to="/#home">Home</NavItem>
-            <NavItem onClick={() => scrollTo('#about')} to="/#about">About</NavItem>
-            <NavItem onClick={() => scrollTo('#services')} to="/#services">Services</NavItem>
-            <NavItem to="/">Blog</NavItem>
-            <NavItem onClick={() => scrollTo('#contact')} to="/#contact">Contact</NavItem>
+            <NavItem onClick={() => scrollTo('#home')} to="/#home"  >Home</NavItem>
+            <NavItem onClick={() => scrollTo('#about')} to="/#about"    >About</NavItem>
+            <NavItem onClick={() => scrollTo('#services')} to="/#services"  >Services</NavItem>
+            <NavItem to="/blog/" >Blog</NavItem>
+            <NavItem onClick={() => scrollTo('#contact')} to="/#contact"    >Contact</NavItem>
         </>
     )
 }

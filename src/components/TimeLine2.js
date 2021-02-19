@@ -113,8 +113,10 @@ const BadgeWrapper = styled.div`
     display: flex;
     flex-flow: row nowrap;
     justify-content:space-between;
-    padding:8px 2px;
-    p{
+    padding:8px 0;
+    p{  
+        text-align:center;
+        font-size:18px;
         padding:'10px'
     }
 `;

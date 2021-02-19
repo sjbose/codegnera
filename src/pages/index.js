@@ -8,6 +8,10 @@ import Skills from './skills';
 import ServiceOffered from './service';
 import Contact from './contact';
 import Project from './projects';
+import Blog from './blog';
+
+
+
 
 
 const WrapperContainer = styled.div`
@@ -26,9 +30,11 @@ const index = () => {
             <About />
             <Skills />
             <ServiceOffered />
-            {/* 
-            
             <Project />
+
+            {/* 
+            <InfoCard />
+            
             <Contact />
              */}
 

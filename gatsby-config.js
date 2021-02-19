@@ -9,6 +9,13 @@ module.exports = {
         author: `@sj_bose`,
     },
     plugins: [
+        `gatsby-plugin-smoothscroll`,
+        `gatsby-plugin-sass`,
+        `gatsby-plugin-react-helmet`,
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-styled-components`,
+        `gatsby-plugin-sharp`,
+        'gatsby-plugin-optimize-svgs',
 
         {
             resolve: `gatsby-plugin-material-ui`,
@@ -20,7 +27,7 @@ module.exports = {
                 disableMinification: false,
             },
         },
-        `gatsby-plugin-smoothscroll`,
+
         {
             resolve: `gatsby-source-contentful`,
             options: {
@@ -28,7 +35,7 @@ module.exports = {
                 accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
             },
         },
-        `gatsby-plugin-react-helmet`,
+
         {
             resolve: 'gatsby-source-filesystem',
             options: {
@@ -37,9 +44,6 @@ module.exports = {
                 // path: `${__dirname}/src/assets/images`,
             },
         },
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-styled-components`,
-        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
@@ -64,13 +68,14 @@ module.exports = {
                     `Chivo\:300,400,700,900`,
                     `Comfortaa\:300,400,500,600,700`,
                     `Patua+One`,
-                    `Bitter\:300,500,600,700,900`
+                    `Bitter\:300,500,600,700,900`,
+                    `Khula\:300,400,600,700,800`
                     // you can also specify font weights and styles
                 ],
                 display: 'swap'
             }
         },
-        'gatsby-plugin-optimize-svgs',
+
     ],
 
 };

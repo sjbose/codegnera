@@ -18,18 +18,42 @@ display:flex;
 flex-flow:row wrap;
 justify-content:space-evenly;
 flex: 1 1 auto;
-// margin:100px 0 200px 0;
+margin:50px 0 100px 0;
 font-size:2rem;
 
 
 `;
+const TitleContainer = styled.div`
+display:flex;
+flex-flow:row wrap;
+justify-content:flex-end;
+    @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+            
+            justify-content:space-around;
+            text-align:center;
+            
+    }
+`;
+const TitleWrapper = styled.div`
+display:flex;
+flex-flow:column wrap;
+justify-content:flex-end;
+// background:red;
+width:50vw;
+    @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+
+            justify-content:space-around;
+            text-align:center;
+            width:100vw;
+    }
+`;
 const Title = styled.h1`
-    font: normal 900 4em/ 1 'Montserrat', sans- serif;
+    font: normal 900 3.2em/ 1 'Khula', sans-serif;
     text-align:right;
-    margin-right:100px;
+    // margin-right:100px;
+    margin-right:80px;
     background-color: #587370;
     background:linear-gradient(165deg, #f02fc2 0%,#6094ea 100%);
-    // background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -41,6 +65,36 @@ const Title = styled.h1`
             margin:0;
     }
     
+`;
+const SubTitle = styled.p`
+    font: normal 700 1.9em/ 1 'Montserrat', sans- serif;
+    text-align:right;
+    margin-right:80px;
+    padding-top:10px;
+    
+    text-transform:lowercase;
+
+
+    @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+            font: normal 500 1.8em/ 1 'Montserrat', sans- serif;
+            text-align:center;
+            margin:0;
+    }
+`;
+const SubPara = styled.p`
+    font: normal 300 1.2em/ 1 'Montserrat', sans- serif;
+    text-align:right;
+    margin-right:80px;
+    padding-top:10px;
+
+    text-transform:lowercase;
+
+    @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+            font: normal 300 1.2em/ 1 'Montserrat', sans- serif;
+            text-align:center;
+            padding:10px;
+            margin:0;
+    }
 `;
 
 
@@ -70,7 +124,7 @@ const Service = styled.div.attrs(props => ({
 
     // margin-bottom:50px;
     width:250px;
-    height:280px;
+    height:300px;
     margin:50px 0;
     background-color:#99aeff;
     // display:inline-block;
@@ -124,15 +178,15 @@ const Service = styled.div.attrs(props => ({
 
 
     & .CardContent h1{
-        font:normal 800 1em/1.2 'Bitter', serif;
+        font:normal 800 0.9em/1.2 'Bitter', serif;
         margin:0;
         text-transform:capitalize;
         text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-        
+        text-align:center;
     }
 
     & .CardContent p{
-        font:normal 400 0.6em/1.2 'Bitter', serif;
+        font:normal 400 0.5em/1.2 'Bitter', serif;
         line-height:25px;
         text-transform:capitalize;
         transform: translateX(-270px);
@@ -181,7 +235,30 @@ const Service = styled.div.attrs(props => ({
 
 
 `;
+const theme = {
+    width: '100vw',
+    height: '100vh',
 
+}
+const WhitePaper = styled.div`
+display:flex;
+flex-flow:row wrap;
+position:relative;
+width:${props => props.theme.width};
+justify-content:space-around;
+background:rgba(255, 255, 255, 0.451);
+border:1px solid rgba(159, 159, 159,0.153);
+padding:30px;
+    backdrop-filter: blur(50px);
+    // opacity:0.80;
+    border-radius:30px;
+    box-shadow: 0 0 2rem 0 rgba(black, .4), 0 0 0.5rem 0 rgba(black, .3);
+
+        @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+            padding:20px;
+    }
+
+`;
 
 
 const ServiceOffered = () => {
@@ -218,36 +295,48 @@ const ServiceOffered = () => {
 
     return (
         <div id="services">
-            <Title>03.Services</Title>
+            <TitleContainer>
+                <TitleWrapper>
+                    <Title>03.Services</Title>
+                    <SubTitle>
+                        We build modern experiences
+                </SubTitle>
+                    <SubPara>We can help you to build your the unique ideas by converting them into elegant designs, awesome experiences and catchy brands.</SubPara>
+                </TitleWrapper>
+            </TitleContainer>
+
+
             <ServiceWrapper>
 
-                {data.allContentfulService.edges.map(({ node }) => (
+                <WhitePaper theme={{ width: "90vw" }}>
+                    {data.allContentfulService.edges.map(({ node }) => (
 
-                    <Service key={node.id} className={node.slug}>
+                        <Service key={node.id} className={node.slug}>
 
-                        <div className="CardContent">
-                            <h1>{node.name}</h1>
+                            <div className="CardContent">
+                                <h1>{node.name}</h1>
 
-                            <p className="animateTxt">{node.description}</p>
+                                <p className="animateTxt">{node.description}</p>
 
-                            <div className="dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                                <div className="dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
                             </div>
-                        </div>
 
-                        <Img
-                            className="cardImg"
-                            fluid={node.image.fluid}
-                            key={node.id}
-                            alt={node.image.title}
-                        ></Img>
+                            <Img
+                                className="cardImg"
+                                fluid={node.image.fluid}
+                                key={node.id}
+                                alt={node.image.title}
+                            ></Img>
 
-                    </Service>
+                        </Service>
 
-                ))}
+                    ))}
 
+                </WhitePaper>
 
             </ServiceWrapper>
 

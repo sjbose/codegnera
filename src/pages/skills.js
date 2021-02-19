@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import TimeLine from '../components/TimeLine';
 import TimeLine2 from '../components/TimeLine2';
 import styled from 'styled-components';
@@ -20,7 +19,7 @@ const Container = styled.div`
     display:flex;
     flex-flow:row nowrap;
     justify-content:space-around;
-    padding:100px 50px;
+    padding:100px 30px;
     @media(max-width:${size.mobileL}) and (min-width:${size.mobileS}){
         flex-direction: column;
 

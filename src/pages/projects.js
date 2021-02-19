@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Img from "gatsby-image/withIEPolyfill";
 import { useStaticQuery, graphql } from 'gatsby';
 
+
 const size = {
     mobileS: '320px',
     mobileM: '375px',
@@ -13,63 +14,81 @@ const size = {
     laptopL: '1440px',
     desktop: '2560px'
 }
-const ServiceWrapper = styled.div`
+const ProjectWrapper = styled.div`
 display:flex;
 flex-flow:row wrap;
 justify-content:space-evenly;
 flex: 1 1 auto;
-padding:0 50px;
-margin:100px auto 200px auto;
-// width:100%;
-// max-width:${size.laptoL};
-font-size:1rem;
+margin:0 0 200px 0;
+font-size:2rem;
+
 
 `;
 const Title = styled.h1`
-    font: normal 900 4em/ 1 'Montserrat', sans- serif;
-    text-align:left;
-    margin-left:100px;
-    background-color: ##587370;
+    font: normal 900 3.2em/ 1 'Khula', sans-serif;
+    text-align:right;
+    margin-right:80px;
+    background-color: #587370;
     background:linear-gradient(165deg, #f02fc2 0%,#6094ea 100%);
-    background-size: 100%;
+    // background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+
+    @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+            font: normal 900 3.2em/ 1 'Montserrat', sans- serif;
+            text-align:center;
+            margin:0;
+    }
     
+`;
+const SubTitle = styled.p`
+    font: normal 500 1.7em/ 1 'Montserrat', sans- serif;
+    text-align:right;
+    margin-right:80px;
+    padding-top:10px;
+    text-transform:lowercase;
+
+    @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+            font: normal 500 1.5em/ 1 'Montserrat', sans- serif;
+            padding-top:15px;
+            text-align:center;
+            margin:0;
+    }
 `;
 
 
-const Service = styled.div.attrs(props => ({
+const Project = styled.div.attrs(props => ({
     className: props.className,
 }))`
-    &.email-template{
-        background:linear-gradient(135deg, #CE9FFC 0%,#7367F0 100%);
-    }
-    &.graphics-design{
-        background:linear-gradient(135deg, #FCDF8A 0%,#E19594 100%);
+    // &.email-template{
+    //     background:linear-gradient(135deg, #CE9FFC 0%,#7367F0 100%);
+    // }
+    // &.graphics-design{
+    //     background:linear-gradient(135deg, #FCDF8A 0%,#E19594 100%);
 
-    }
-    &.cms{
-        background:linear-gradient(180deg, #6A99B5 30%,#08203E 100%);
+    // }
+    // &.cms{
+    //     // background:linear-gradient(180deg, #6A99B5 30%,#08203E 100%);
+    //     background:linear-gradient(135deg, #23bcba 0%,#44e994 100%);
 
-    }
-    &.website-design{
-        // background:linear-gradient(135deg, #FCDF8A 0%,#E19594 100%);
-        // background:linear-gradient(135deg, #f2d50f 0%,#da0641 100%);
-        background:linear-gradient(135deg, #FF9255 0%,#FF514E 100%);
-    }
-    &.backend{
-        background:linear-gradient(135deg, #c3ec52 0%,#0ba29d 100%);
-    }
+    // }
+    // &.website-design{
+    //     // background:linear-gradient(135deg, #FCDF8A 0%,#E19594 100%);
+    //     // background:linear-gradient(135deg, #f2d50f 0%,#da0641 100%);
+    //     background:linear-gradient(135deg, #FF9255 0%,#FF514E 100%);
+    // }
+    // &.backend{
+    //     background:linear-gradient(135deg, #c3ec52 0%,#0ba29d 100%);
+    // }
 
-    margin-bottom:50px;
+    // margin-bottom:50px;
     width:200px;
     height:200px;
-    margin:13px;
-    background-color:#99aeff;
-    
-    display:inline-block;
+    margin:50px 0;
+    background-color:#ffffff;
+    // display:inline-block;
     background-size:cover;
     position:relative;
     cursor:pointer;
@@ -79,13 +98,18 @@ const Service = styled.div.attrs(props => ({
     color:white;
     font-family:'Roboto';
     border-radius:20px;
+    padding:0 10px;
     // border:1px solid rgba(187, 186, 186, 0.451);
     // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
+    
 
     &:hover{
     box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
-    transform:scale(1.05)
+    // transform:scale(1.05);
+    }
+    &:hover .cardImg{
+
+    transform:scale(1.10);
     }
     
     & .cardImg{
@@ -119,26 +143,27 @@ const Service = styled.div.attrs(props => ({
 
 
     & .CardContent h1{
-        font:normal 800 1.6em/1.2 'Bitter', serif;
+        font:normal 800 0.7em/1.2 'Bitter', serif;
         margin:0;
         text-transform:capitalize;
-        text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-        // z-index:99;
+        // text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        color:#000000;
     }
 
     & .CardContent p{
-        font:normal 400 1.1em/1.2 'Bitter', serif;
+        font:normal 400 0.4em/1.2 'Bitter', serif;
         line-height:25px;
         text-transform:capitalize;
         transform: translateX(-270px);
         transition-delay: 0.2s;
-        padding-top:30px;
+        padding-top:10px;
+        color:#000000;
     }
     & .dots{
         position:absolute;
         bottom:20px;
         right:30px;
-        margin: 0 auto;
+        // margin: 0 auto;
         width:30px;
         height:30px;
         color:currentColor;
@@ -171,28 +196,6 @@ const Service = styled.div.attrs(props => ({
     &:hover .dots nth-child(3){
         transition-delay: 0.25s;
     }
-
-
-
-    // !Media Screens
-        @media(max-width:${size.mobileL}) and (min-width:${size.mobileS}){ 
-            &:nth-child(even){
-                margin-top:80px;
-            }
-
-        }
-        @media(max-width:${size.mobileL}) and (min-width:${size.mobileS}){ 
-            &:nth-child(odd){
-                margin-top:30px;
-            }
-        }
-        @media(max-width:${size.laptop}) and (min-width:${size.desktop}){
-            &:nth-child(5){
-                margin-top:80px;
-            }
-        }
-        
-
 `;
 
 
@@ -230,13 +233,14 @@ const ServiceOffered = () => {
 
 
     return (
-        <div id="projects">
+        <div id="services">
             <Title>04.Projects</Title>
-            <ServiceWrapper>
+            <SubTitle>Find my recent projects</SubTitle>
+            <ProjectWrapper>
 
                 {data.allContentfulService.edges.map(({ node }) => (
 
-                    <Service key={node.id} className={node.slug}>
+                    <Project key={node.id} className={node.slug}>
 
                         <div className="CardContent">
                             <h1>{node.name}</h1>
@@ -257,12 +261,12 @@ const ServiceOffered = () => {
                             alt={node.image.title}
                         ></Img>
 
-                    </Service>
+                    </Project>
 
                 ))}
 
 
-            </ServiceWrapper>
+            </ProjectWrapper>
 
         </div>
     )

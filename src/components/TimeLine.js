@@ -137,6 +137,21 @@ const Title = styled.h1`
     }
     
 `;
+const SubTitle = styled.p`
+    font: normal 500 1.5em/ 1 'Montserrat', sans- serif;
+    text-align:left;
+    // margin-right:80px;
+    padding-top:10px;
+
+    // text-transform:capitalize;
+
+
+    @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+            font: normal 500 1.8em/ 1 'Montserrat', sans- serif;
+            text-align:center;
+            margin:0;
+    }
+`;
 
 
 
@@ -145,7 +160,7 @@ const TimeLine = (props) => {
     return (
         <div>
             <Title>02.Skills</Title>
-
+            <SubTitle>What I've learned through out the years</SubTitle>
             <LineUl>
                 <LineLi data-event="2021" >
                     <h3>New year goal</h3>
