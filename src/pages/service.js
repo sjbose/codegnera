@@ -48,7 +48,7 @@ width:50vw;
     }
 `;
 const Title = styled.h1`
-    font: normal 900 3.2em/ 1 'Khula', sans-serif;
+    font: normal 900 4em/ 1 'Montserrat', sans- serif;
     text-align:right;
     // margin-right:100px;
     margin-right:80px;
@@ -90,7 +90,7 @@ const SubPara = styled.p`
     text-transform:lowercase;
 
     @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
-            font: normal 300 1.2em/ 1 'Montserrat', sans- serif;
+            font: normal 300 1.6em/ 1 'Montserrat', sans-serif;
             text-align:center;
             padding:10px;
             margin:0;
@@ -235,11 +235,10 @@ const Service = styled.div.attrs(props => ({
 
 
 `;
-const theme = {
-    width: '100vw',
-    height: '100vh',
-
-}
+// const theme = {
+//     width: '100vw',
+//     height: '100vh',
+// }
 const WhitePaper = styled.div`
 display:flex;
 flex-flow:row wrap;
@@ -249,10 +248,10 @@ justify-content:space-around;
 background:rgba(255, 255, 255, 0.451);
 border:1px solid rgba(159, 159, 159,0.153);
 padding:30px;
-    backdrop-filter: blur(50px);
-    // opacity:0.80;
-    border-radius:30px;
-    box-shadow: 0 0 2rem 0 rgba(black, .4), 0 0 0.5rem 0 rgba(black, .3);
+backdrop-filter: blur(50px);
+// opacity:0.80;
+border-radius:30px;
+box-shadow: 0 0 2rem 0 rgba(black, .4), 0 0 0.5rem 0 rgba(black, .3);
 
         @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
             padding:20px;

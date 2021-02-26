@@ -1,12 +1,12 @@
-import React, { useState } from "react"
-import styled from "styled-components"
-import NavbarLinks from "./NavLinks"
-import Logo from "./Logo"
+import React, { useState } from "react";
+import styled from "styled-components";
+import NavbarLinks from "./NavLinks";
+import Logo from "./Logo";
 
 const Navigation = styled.nav`
     height: 10vh;
     display: flex;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255,0.450);
     // position: relative;
     position: sticky;
 	top: 0;
@@ -109,10 +109,10 @@ const Navbar = () => {
                     <NavbarLinks />
                 </Navbox>
             ) : (
-                    <Navbox open>
-                        <NavbarLinks />
-                    </Navbox>
-                )}
+                <Navbox open>
+                    <NavbarLinks />
+                </Navbox>
+            )}
         </Navigation>
     )
 }

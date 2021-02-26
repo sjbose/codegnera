@@ -127,7 +127,7 @@ const ContactFrom = () => {
 
 
         <ContactBlock>
-            <Title>Have a query? Let us help you</Title>
+            <Title>Let us help you</Title>
             <ContactForm onSubmit={handleSubmit} name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="contact" />
                 <label htmlFor="name">Name:</label>

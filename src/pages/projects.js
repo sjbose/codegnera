@@ -25,9 +25,9 @@ font-size:2rem;
 
 `;
 const Title = styled.h1`
-    font: normal 900 3.2em/ 1 'Khula', sans-serif;
-    text-align:right;
-    margin-right:80px;
+    font: normal 900 4em/ 1 'Montserrat', sans- serif;
+    text-align:left;
+    margin-left:80px;
     background-color: #587370;
     background:linear-gradient(165deg, #f02fc2 0%,#6094ea 100%);
     // background-size: 100%;
@@ -45,8 +45,8 @@ const Title = styled.h1`
 `;
 const SubTitle = styled.p`
     font: normal 500 1.7em/ 1 'Montserrat', sans- serif;
-    text-align:right;
-    margin-right:80px;
+    text-align:left;
+    margin-left:80px;
     padding-top:10px;
     text-transform:lowercase;
 
