@@ -19,7 +19,7 @@ const ContactForm = styled.form`
     position:relative;
     flex-flow:column nowrap;
     width:100%;
-    min-width:250px;
+    min-width:300px;
     
     
     & label {
@@ -81,6 +81,7 @@ const ContactBlock = styled.div`
     flex-flow:column nowrap;
     justify-content:center;
     background:rgba(255, 255, 255,0.253);
+    // background: rgba(121, 114, 145, 0.264);
     border:1px solid rgba(159, 159, 159,0.153);
     max-width:400px;
     height:430px;
@@ -93,7 +94,6 @@ const ContactBlock = styled.div`
 const Title = styled.h1`
 font:normal 400 1.9em/1 'Patua One', cursive;
 line-height:1.6;
-
 `;
 const ContactFrom = () => {
     const [formState, setFormState] = useState({ name: "", email: "" });

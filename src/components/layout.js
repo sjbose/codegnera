@@ -3,15 +3,11 @@ import styled from 'styled-components';
 import GlobalStyles from '../styles/GlobalStyles';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import backgroundImg from '../assets/images/newbg.svg';
-
+// import backgroundImg from '../assets/images/newbg.svg';
+// import backgroundImg from '../assets/images/bgblue.svg';
 
 const ContentStyles = styled.div`
-    // background: #ECF0F3;
-    background:url(${backgroundImg});
-    // background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
     
 `;
 if (typeof window !== "undefined") {

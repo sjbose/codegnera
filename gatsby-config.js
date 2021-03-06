@@ -20,16 +20,16 @@ module.exports = {
         `gatsby-plugin-sharp`,
         'gatsby-plugin-optimize-svgs',
 
-        {
-            resolve: `gatsby-plugin-material-ui`,
-            options: {
-                stylesProvider: {
-                    injectFirst: true,
-                },
-                disableAutoprefixing: false,
-                disableMinification: false,
-            },
-        },
+        // {
+        //     resolve: `gatsby-plugin-material-ui`,
+        //     options: {
+        //         stylesProvider: {
+        //             injectFirst: true,
+        //         },
+        //         disableAutoprefixing: false,
+        //         disableMinification: false,
+        //     },
+        // },
 
         {
             resolve: `gatsby-source-contentful`,
@@ -56,7 +56,7 @@ module.exports = {
                 background_color: `#ECF0F3`,
                 theme_color: `#5352ED`,
                 display: `minimal-ui`,
-                icon: `src/assets/images/logoSqr.svg`, // This path is relative to the root of the site.
+                icon: `src/assets/images/logo.png`, // This path is relative to the root of the site.
             },
         },
         {
@@ -77,7 +77,7 @@ module.exports = {
                     `Khula\:300,400,600,700,800`,
                     `Poppins\:200,300,400,500,600,700,800,900`,
                     `Oswald\:200,300,400,500,600,700`,
-                    `Bebas+Neue`,
+                    `Oswald\:200,300,400,500,600,700`,
                     // you can also specify font weights and styles
                 ],
                 display: 'swap'

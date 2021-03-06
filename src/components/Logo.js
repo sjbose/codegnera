@@ -5,6 +5,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 const LogoWrap = styled.div`
     margin: 0;
+    padding:8px;
     flex: 0 1 36px;
 
     min-width:4rem;

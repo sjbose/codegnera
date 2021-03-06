@@ -63,7 +63,7 @@ const Navbox = styled.div`
 const Hamburger = styled.div`
     background-color: #111;
     width: 30px;
-    height: 3px;
+    height: 1px;
     transition: all .3s linear;
     align-self: center;
     position: relative;
@@ -72,7 +72,7 @@ const Hamburger = styled.div`
     ::before,
     ::after {
         width: 30px;
-        height: 3px;
+        height: 1px;
         background-color: #111;
         content: "";
         position: absolute;

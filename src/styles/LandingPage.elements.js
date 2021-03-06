@@ -1,8 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
-import OnRocket from '../assets/images/OnRocket_mob3.svg';
-import SEO from '../components/SEO';
-
+// import { motion } from 'framer-motion';
 const size = {
     mobileS: '320px',
     mobileM: '375px',
@@ -12,7 +9,7 @@ const size = {
     laptopL: '1440px',
     desktop: '2560px'
 }
-const BannerImg = styled.img`
+export const BannerImg = styled.img`
         display:flex,
         
         // max-width:100%;
@@ -39,7 +36,7 @@ const BannerImg = styled.img`
 
 
 
-const Container = styled.div`
+export const Container = styled.div`
     display:flex;
     flex-flow:row nowrap;
     justify-content:space-around;
@@ -51,7 +48,7 @@ const Container = styled.div`
         flex-direction:column;
     }
 `;
-const TextWrapper = styled.div`
+export const TextWrapper = styled.div`
 display:flex;
 flex-flow:column nowrap;
 // background:blue;
@@ -64,10 +61,12 @@ padding-top:100px;
     }
 
 `;
-const SubWhat = styled.h5`
+export const SubWhat = styled.h5`
 font:normal 300 1.8em/ 1 'Saira', sans-serif;
 text-transform:capitalize;
 padding:0 10px 0 200px ;
+color: rgba(255, 255, 255, 0.751);
+
 
 @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
     font:normal 500 1.8em/ 1 'Saira', sans-serif;
@@ -75,35 +74,17 @@ padding:0 10px 0 200px ;
     padding:10px;
     }
 `;
-const SubDev = styled.h3`
+
+export const SubDev = styled.h3`
 font:normal 900 4.7em/ 1 'Montserrat', sans- serif;
 text-transform:capitalize;
 // padding:0 50px 50px 0;
 padding:0 100px 0 200px;
-
+color: rgba(255, 255, 255, 0.651);
 @media(max-width:${size.laptop}) and (min-width:${size.mobileS}){
     font:normal 900 3.5em/ 1 'Montserrat', sans-serif;
     text-align:center;
     padding:50px;
+    color: rgba(193, 193, 193,0.854);
     }
 `;
-const LandingPage = () => {
-
-
-    return (
-        <>
-            <SEO title="home">
-                <title>WELCOME</title>
-            </SEO>
-            <Container id="home">
-                <BannerImg src={OnRocket} alt="banner image" />
-                <TextWrapper>
-                    <SubWhat>What I do</SubWhat>
-                    <SubDev>Design, Develop & Create an Identity for your Product</SubDev>
-                </TextWrapper>
-            </Container>
-        </>
-
-    )
-}
-export default LandingPage;

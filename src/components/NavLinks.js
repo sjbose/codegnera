@@ -2,7 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import { Link } from "gatsby";
 import scrollTo from 'gatsby-plugin-smoothscroll';
-
+import { AnimatePresence } from "framer-motion";
 
 
 // if (typeof window !== "undefined") {
@@ -51,11 +51,26 @@ const NavItem = styled(Link)`
 const NavbarLinks = () => {
     return (
         <>
-            <NavItem onClick={() => scrollTo('#home')} to="/#home"  >Home</NavItem>
-            <NavItem onClick={() => scrollTo('#about')} to="/#about"    >About</NavItem>
-            <NavItem onClick={() => scrollTo('#services')} to="/#services"  >Services</NavItem>
-            <NavItem to="/blog/" >Blog</NavItem>
-            <NavItem onClick={() => scrollTo('#contact')} to="/#contact"    >Contact</NavItem>
+            <AnimatePresence>
+
+                <NavItem key="1" onClick={() => scrollTo('#home')} to="/#home"  >Home</NavItem>
+                <NavItem key="2" onClick={() => scrollTo('#about')} to="/#about"    >About</NavItem>
+                <NavItem key="3" onClick={() => scrollTo('#services')} to="/#services"  >Services</NavItem>
+                <NavItem key="4" onClick={() => scrollTo('#projects')} to="/#projects"  >Projects</NavItem>
+                <NavItem key="5" to="/blog/" >Blog</NavItem>
+                <NavItem key="6" onClick={() => scrollTo('#contact')} to="/#contact" >Contact</NavItem>
+
+            </AnimatePresence>
+
+            {/* <NavItem to="/home/">Home</NavItem>
+            <NavItem to="/about/">About</NavItem>
+            <NavItem to="/service/">Services</NavItem>
+            <NavItem to="/projects/">Work</NavItem>
+            <NavItem to="/contact/" >Contact</NavItem> */}
+
+
+
+
         </>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import { graphql, Link } from "gatsby";
-import styled from 'styled-components';
-import Img from "gatsby-image/withIEPolyfill";
+import { graphql } from "gatsby";
+// import styled from 'styled-components';
+// import Img from "gatsby-image/withIEPolyfill";
 // import { useStaticQuery, graphql } from 'gatsby';
 // import { Link } from 'gatsby';
 
@@ -40,11 +40,11 @@ query ($slug: String!) {
 
 
 const article = (props) => {
-    return (
-        <div>
-            <h1>{props.data.contentfulArticle.name}</h1>
-        </div>
-    )
+  return (
+    <div>
+      <h1>{props.data.contentfulArticle.name}</h1>
+    </div>
+  )
 }
 
 export default article
