@@ -21,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
         font-size: 2vw;
         scroll-behavior: smooth;
         transition: all 0.4s ease-in-out;
+        overflow:hidden;
     }
 `;
 export default GlobalStyles;

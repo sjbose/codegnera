@@ -73,7 +73,7 @@ export const Title = styled.h1`
     font: normal 900 4em/ 1 'Montserrat', sans- serif;
     text-align:right;
     margin-right:100px;
-    margin-top:100px;
+    
     color: rgba(255, 255, 255, 0.651);
     // background-color: #587370;
     // background:linear-gradient(165deg, #f02fc2 0%,#6094ea 100%);
@@ -87,5 +87,11 @@ export const Title = styled.h1`
             font: normal 900 3.2em/ 1 'Montserrat', sans-serif;
             text-align:center;
             margin:100px 0 50px 0;
+    }
+`;
+export const AboutWrapper = styled.div`
+    margin:200px 0 100px 0;
+        @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+            margin:150px 0 100px 0;
     }
 `;

@@ -1,12 +1,10 @@
-import React from 'react'
+import React from 'react';
+import { Container } from '../styles/404.elements';
 
 
 const FourOFour = () => {
     return (
-        <>
-
-            <h3>Hey! That page doesn't exist</h3>
-        </>
+        <Container />
     )
 }
 

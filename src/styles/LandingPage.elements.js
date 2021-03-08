@@ -11,7 +11,7 @@ const size = {
 }
 export const BannerImg = styled.img`
         display:flex,
-        
+        cursor:pointer,
         // max-width:100%;
         width:800px;
         height:600px;
@@ -41,8 +41,7 @@ export const Container = styled.div`
     flex-flow:row nowrap;
     justify-content:space-around;
     padding:30px 0;
-    // background:green;
-    // flex: 1 1 auto;
+
 
     @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
         flex-direction:column;
@@ -61,23 +60,23 @@ padding-top:100px;
     }
 
 `;
-export const SubWhat = styled.h5`
-font:normal 300 1.8em/ 1 'Saira', sans-serif;
-text-transform:capitalize;
-padding:0 10px 0 200px ;
-color: rgba(255, 255, 255, 0.751);
+// export const SubWhat = styled.h5`
+// font:normal 300 1.8em/ 1 'Saira', sans-serif;
+// text-transform:capitalize;
+// padding:0 10px 0 200px ;
+// color: rgba(255, 255, 255, 0.751);
 
 
-@media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
-    font:normal 500 1.8em/ 1 'Saira', sans-serif;
-    text-align:center;
-    padding:10px;
-    }
-`;
+// @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+//     font:normal 500 1.8em/ 1 'Saira', sans-serif;
+//     text-align:center;
+//     padding:10px;
+//     }
+// `;
 
 export const SubDev = styled.h3`
 font:normal 900 4.7em/ 1 'Montserrat', sans- serif;
-text-transform:capitalize;
+// text-transform:capitalize;
 // padding:0 50px 50px 0;
 padding:0 100px 0 200px;
 color: rgba(255, 255, 255, 0.651);

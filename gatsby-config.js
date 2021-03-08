@@ -50,8 +50,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `gatsby-starter-default`,
-                short_name: `starter`,
+                name: `Codegenera`,
+                short_name: `codegenera`,
                 start_url: `/`,
                 background_color: `#ECF0F3`,
                 theme_color: `#5352ED`,

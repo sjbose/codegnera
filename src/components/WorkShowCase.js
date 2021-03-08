@@ -3,7 +3,7 @@ import React from 'react';
 // import styled from 'styled-components';
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
-import { Project, CardContent, CardContainer } from '../styles/WorkShowCase.elements';
+import { Project, CardContainer } from '../styles/WorkShowCase.elements';
 // import Img from "gatsby-image/withIEPolyfill";
 // import { useStaticQuery, graphql } from 'gatsby';
 

@@ -5,25 +5,29 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 // import backgroundImg from '../assets/images/newbg.svg';
 // import backgroundImg from '../assets/images/bgblue.svg';
+import backgroundImg from '../assets/images/bgblue1.svg';
+
 
 const ContentStyles = styled.div`
-
+        background:url(${backgroundImg});
+    // background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     
 `;
-if (typeof window !== "undefined") {
-    // eslint-disable-next-line global-require
-    require("smooth-scroll")('a[href*="#"]')
-}
+
 const Layout = ({ children }) => {
     return (
         <>
             <GlobalStyles />
-            <ContentStyles>
-                <Navbar />
-                {children}
-                <Footer />
-            </ContentStyles>
+            <Navbar />
 
+            <ContentStyles>
+
+                {children}
+
+            </ContentStyles>
+            <Footer />
 
         </>
     )

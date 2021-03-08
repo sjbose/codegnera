@@ -14,7 +14,8 @@ display:flex;
 flex-flow:row wrap;
 justify-content:space-evenly;
 flex: 1 1 auto;
-margin:50px 0 100px 0;
+// margin:50px 0 100px 0;
+padding:100px 0;
 font-size:2rem;
 
 
@@ -147,6 +148,7 @@ export const Service = styled.div.attrs(props => ({
     & .cardImg{
         height:100%;
         width:100%;
+        
         position:absolute;
         top:0;
         left:0;
@@ -242,11 +244,11 @@ flex-flow:row wrap;
 position:relative;
 width:${props => props.theme.width};
 justify-content:space-around;
-// background:rgba(255, 255, 255, 0.451);
+background:rgba(255, 255, 255, 0.151);
 // background: rgba(29, 24, 44, 0.264);
 // background: rgba(87, 79, 113, 0.264);
 // background: rgba(121, 114, 145, 0.264);
-background:linear-gradient(135deg, #C56CD6 0%,#3425AF 60%);
+// background:linear-gradient(135deg, #C56CD6 0%,#3425AF 60%);
 border:1px solid rgba(159, 159, 159,0.153);
 padding:30px;
 backdrop-filter: blur(50px);

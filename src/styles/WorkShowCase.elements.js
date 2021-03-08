@@ -9,17 +9,18 @@ const size = {
     laptopL: '1440px',
     desktop: '2560px'
 }
-const theme = {
-    WhiteColor: '#ffffff',
-    BlackColor: '#000000',
-}
+// const theme = {
+//     WhiteColor: '#ffffff',
+//     BlackColor: '#000000',
+// }
 
 export const CardContainer = styled.div`
     display:flex;
     font-size:2rem;
     flex-flow:column nowrap;
     justify-content: space-evenly;
-    background: rgba(29, 24, 44, 0.264);
+    // background: rgba(29, 24, 44, 0.264);
+    background:rgba(255, 255, 255, 0.151);
     border:1px solid rgba(159, 159, 159,0.153);
     padding:30px;
     backdrop-filter: blur(50px);

@@ -1,39 +1,28 @@
 import React from 'react';
-import OnRocket from '../assets/images/OnrocketNoBGSVG.svg';
-import { BannerImg, Container, TextWrapper, SubWhat, SubDev } from '../styles/LandingPage.elements';
-import SEO from '../components/SEO';
+
+import LandingPage from '../pages/landingPage';
+import About from '../components/About';
+import ServiceOffered from '../pages/service';
+import Contact from '../pages/contact';
+import Project from '../pages/projects';
 import { motion } from 'framer-motion';
-import { animateHome, transition } from '../Animation/index';
-
-
-
-
-
-
-
-const LandingPage = () => {
-
-
-
+import { pageTransitionVariants, fadeUp } from '../Animation/index';
+// import Blog from './blog';
+const home = () => {
     return (
-        <>
-            <SEO title="home">
-                <title>WELCOME</title>
-            </SEO>
-            <motion.div initial="out" animate="in" exit="out" variants={animateHome} transition={transition}>
-                <Container id="home">
-
-                    <BannerImg src={OnRocket} alt="banner image" />
-
-                    <TextWrapper>
-                        {/* <SubWhat>I make</SubWhat> */}
-                        <SubDev>Design, Develop & Create Identity for your Product</SubDev>
-                    </TextWrapper>
-                </Container>
-            </motion.div>
-
-        </>
-
+        <motion.div
+            variants={fadeUp}
+            initial="initialState"
+            animate="visible"
+            exit="exit"
+        >
+            <LandingPage />
+            <About />
+            <ServiceOffered />
+            <Project />
+            <Contact />
+        </motion.div>
     )
 }
-export default LandingPage;
+
+export default home;

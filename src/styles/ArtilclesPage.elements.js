@@ -16,7 +16,7 @@ const size = {
 
 export const Container = styled.div`
     display:flex;
-    // height:100vh;
+    height:200vh;
     // padding:50px;
     flex-flow: row wrap;
     justify-content:space-around;
@@ -35,20 +35,27 @@ export const Container = styled.div`
 
 export const BlogCard = styled.div`
     display: flex;
+    max-height:470px;
     flex-flow: column nowrap;
-    margin: 30rem 0 10rem  0;
-    box-shadow: 0 3px 7px -1px rgba(0,0,0,0.44);
+    justify-content:space-evenly;
+    // box-shadow: 0 3px 7px -1px rgba(0,0,0,0.44);
+    border:1px solid rgba(159, 159, 159,0.253);
     margin-bottom: 1.6%;
     line-height: 1.4;
     font-family: sans-serif;
     border-radius: 5px;
     overflow: hidden;
-    z-index: 0;
+    z-index: 5;
     cursor:pointer;
 
 
 &:hover .cardImg{
     transform: scale(1.3) rotate(3deg);
+    // filter: hue-rotate(0deg);
+    
+}
+& cardImg::after{
+    
 }
 & .cardImg{
     position: absolute;
@@ -59,6 +66,9 @@ export const BlogCard = styled.div`
 	background-size: cover;
 	background-position: center;
 	transition: transform 0.2s;
+    max-height:470px;
+    // filter: hue-rotate(63deg);
+    filter: grayscale(0.1) hue-rotate(64deg);
 }
 
 & .meta{
@@ -69,10 +79,11 @@ export const BlogCard = styled.div`
 
 & .description{
     // padding: 0.4rem ;
-	background: #fff;
+	// background: #fff;
 	position: relative;
     z-index: 1;
-    background:rgba(255, 255, 255, 0.451);
+    // background:rgba(255, 255, 255, 0.451);
+    background:linear-gradient(135deg, rgba(114, 23, 234, 0.244) 5%, rgba(234, 96, 96,0.353) 100%);
     border:1px solid rgba(159, 159, 159,0.153);
     padding:30px;
     backdrop-filter: blur(50px);
@@ -88,18 +99,19 @@ export const BlogCard = styled.div`
 	margin: 0;
 	font-size: 1.7rem;
     text-transform:capitalize;
+    color: rgba(255, 255, 255, 0.489);
 }
 & .description h2 {
 	font-size: 1rem;
 	font-weight: 300;
 	text-transform: uppercase;
 	// color: #a2a2a2;
-    color: rgba(255, 255, 255, 0.989);
+    color: rgba(255, 255, 255, 0.889);
 	margin-top: 5px;
 }
 & .description p{
     overflow: hidden;
-    
+    color: rgb(190, 190, 192,0.754);
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 4;
@@ -114,7 +126,8 @@ export const BlogCard = styled.div`
 	content: "";
 	position: absolute;
 	height: 5px;
-	background: #5ad67d;
+	// background: #5ad67d;
+    background:linear-gradient(270deg, #f02fc2 0%,#6094ea 100%);
 	width: 55px;
     transition:all 0.4s ease-in-out;
 	top: 1rem;
@@ -137,7 +150,10 @@ export const BlogCard = styled.div`
 
     flex-direction: row;
 	max-width: 450px;
-    
+    max-height:280px;
+    margin: 30rem 0 10rem 0;
+
+
     & .meta{
         flex-basis: 45%;
         // height: auto;
@@ -183,7 +199,7 @@ export const BlogCard = styled.div`
 
 export const MoreLink = styled(Link)`
     text-decoration: none;
-    color: #403D3C;
+    color: rgba(255, 255, 255, 0.889);
     display: inline-block;
     white-space: nowrap;
     margin: 20px 0 0 0;
@@ -199,13 +215,13 @@ export const MoreLink = styled(Link)`
         width: 0%;
         content: ".";
         color: transparent;
-        background: #5ad67d;
+        // background: #5ad67d;
         height:1.5px;
         transition: all 0.4s ease-in;
     }
 
     :hover {
-        color:#5ad67d;
+        color:rgba(245, 199, 17, 0.961);
         ::after {
         width: 100%;
         }

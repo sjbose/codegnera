@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from "gatsby-image/withIEPolyfill";
 import { useStaticQuery, graphql } from 'gatsby';
+import { pageTransitionVariants } from '../Animation/index';
 import { WhitePaper, Service, SubPara, Title, SubTitle, TitleWrapper, TitleContainer, ServiceWrapper } from '../styles/ServicePage.elements';
 import { motion } from 'framer-motion'
 
@@ -60,14 +61,19 @@ const ServiceOffered = () => {
 
 
     return (
-        <div id="services">
+        <motion.div
+            variants={pageTransitionVariants}
+            initial="initialState"
+            animate="visible"
+            exit="exit"
+        >
             <TitleContainer>
                 <TitleWrapper>
                     <Title># Services</Title>
                     <SubTitle>
-                        We build modern experiences
+                        Type of services i do provide
                 </SubTitle>
-                    <SubPara>We can help you to build your the unique ideas by converting them into elegant designs, awesome experiences and catchy brands.</SubPara>
+                    <SubPara>I can help you to build your the unique ideas by converting them into elegant designs, awesome experiences and catchy brands.</SubPara>
                 </TitleWrapper>
             </TitleContainer>
 
@@ -109,7 +115,7 @@ const ServiceOffered = () => {
 
             </ServiceWrapper>
 
-        </div>
+        </motion.div>
     )
 }
 export default ServiceOffered;
