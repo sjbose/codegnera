@@ -19,6 +19,7 @@ export const CardContainer = styled.div`
     font-size:2rem;
     flex-flow:column nowrap;
     justify-content: space-evenly;
+    
     // background: rgba(29, 24, 44, 0.264);
     background:rgba(255, 255, 255, 0.151);
     border:1px solid rgba(159, 159, 159,0.153);
@@ -77,19 +78,17 @@ export const CardContainer = styled.div`
 
 export const Project = styled.div`
     width:100%;
-    height:500px;
+    height:100%;
     
-    background-color:#99aeff;
+    // background-color:#99aeff;
     background-size:cover;
     // position:relative;
-    cursor:pointer;
+    
     transition: all 0.4s ease-out;
     box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
     overflow:hidden;
     border-radius:10px;
     
-
-
 
     @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
 

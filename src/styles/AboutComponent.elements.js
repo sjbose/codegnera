@@ -17,7 +17,8 @@ export const Container = styled.div`
     font-size:2rem;
     flex:1 1 auto;
     position:relative;
-    margin-bottom:100px;
+    margin-bottom:50px;
+    
 
     @media(max-width:${size.laptop}) and (min-width:${size.mobileS}){ 
         flex-direction:column;
@@ -25,15 +26,15 @@ export const Container = styled.div`
     }
 `;
 export const ItemOne = styled.img`
+margin:0 auto;
+width:100%;
+height:600px;
 
-// background:red;
-max-width:600px;
 
 ` ;
 export const ItemTwo = styled.div`
 display:flex;
 flex-flow:column nowrap;
-
 padding:30px;
 
 
@@ -49,7 +50,7 @@ padding:30px;
 
     }
     @media(max-width:${size.laptop}) and(min-width:${size.mobileS}){
-        padding:0;
+        padding:5px;
 
     }
 
@@ -92,6 +93,6 @@ export const Title = styled.h1`
 export const AboutWrapper = styled.div`
     margin:200px 0 100px 0;
         @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
-            margin:150px 0 100px 0;
+            margin:150px 0 50px 0;
     }
 `;

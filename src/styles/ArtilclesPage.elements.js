@@ -20,7 +20,7 @@ export const Container = styled.div`
     // padding:50px;
     flex-flow: row wrap;
     justify-content:space-around;
-    background:url(${backgroundImg});
+    // background:url(${backgroundImg});
     // background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -82,8 +82,8 @@ export const BlogCard = styled.div`
 	// background: #fff;
 	position: relative;
     z-index: 1;
-    // background:rgba(255, 255, 255, 0.451);
-    background:linear-gradient(135deg, rgba(114, 23, 234, 0.244) 5%, rgba(234, 96, 96,0.353) 100%);
+    background:rgba(255, 255, 255, 0.451);
+    // background:linear-gradient(135deg, rgba(114, 23, 234, 0.244) 5%, rgba(234, 96, 96,0.353) 100%);
     border:1px solid rgba(159, 159, 159,0.153);
     padding:30px;
     backdrop-filter: blur(50px);
@@ -99,7 +99,7 @@ export const BlogCard = styled.div`
 	margin: 0;
 	font-size: 1.7rem;
     text-transform:capitalize;
-    color: rgba(255, 255, 255, 0.489);
+    color: rgba(255, 255, 255, 0.89);
 }
 & .description h2 {
 	font-size: 1rem;
@@ -111,7 +111,7 @@ export const BlogCard = styled.div`
 }
 & .description p{
     overflow: hidden;
-    color: rgb(190, 190, 192,0.754);
+    color: rgb(0,0,0,0.50);
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 4;
@@ -127,7 +127,8 @@ export const BlogCard = styled.div`
 	position: absolute;
 	height: 5px;
 	// background: #5ad67d;
-    background:linear-gradient(270deg, #f02fc2 0%,#6094ea 100%);
+    // background:linear-gradient(270deg, #f02fc2 0%,#6094ea 100%);
+    background:linear-gradient(135deg, #fd6e69 0%,#ffc600 100%);
 	width: 55px;
     transition:all 0.4s ease-in-out;
 	top: 1rem;
@@ -151,7 +152,7 @@ export const BlogCard = styled.div`
     flex-direction: row;
 	max-width: 450px;
     max-height:280px;
-    margin: 30rem 0 10rem 0;
+    margin: 10rem 0 10rem 0;
 
 
     & .meta{

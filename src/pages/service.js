@@ -1,7 +1,7 @@
 import React from 'react';
 import Img from "gatsby-image/withIEPolyfill";
 import { useStaticQuery, graphql } from 'gatsby';
-import { pageTransitionVariants } from '../Animation/index';
+import { fadeUp } from '../Animation/index';
 import { WhitePaper, Service, SubPara, Title, SubTitle, TitleWrapper, TitleContainer, ServiceWrapper } from '../styles/ServicePage.elements';
 import { motion } from 'framer-motion'
 
@@ -9,24 +9,24 @@ import { motion } from 'framer-motion'
 
 
 const container = {
-    hidden: { opacity: 1, scale: 0 },
+    initialState: { opacity: 1, scale: 0 },
     visible: {
         opacity: 1,
         scale: 1,
         transition: {
-            delayChildren: 0.3,
-            staggerChildren: 0.2
+
+            delayChildren: 5
         }
     }
 };
 
-// const item = {
-//     hidden: { y: 20, opacity: 0 },
-//     visible: {
-//         y: 0,
-//         opacity: 1
-//     }
-// };
+const item = {
+    initialState: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1
+    }
+};
 
 const ServiceOffered = () => {
 
@@ -62,7 +62,7 @@ const ServiceOffered = () => {
 
     return (
         <motion.div
-            variants={pageTransitionVariants}
+            variants={fadeUp}
             initial="initialState"
             animate="visible"
             exit="exit"
@@ -78,14 +78,20 @@ const ServiceOffered = () => {
             </TitleContainer>
 
 
-            <ServiceWrapper as={motion.div} className="container" variants={container}
-                initial="hidden"
-                animate="visible">
+            <ServiceWrapper as={motion.div} className="container"
+                variants={container}
+                initial="initialState"
+                animate="visible"
+            >
 
                 <WhitePaper theme={{ width: "90vw" }}>
                     {data.allContentfulService.edges.map(({ node }) => (
 
-                        <Service as={motion.div} key={node.id} className={node.slug}
+                        <Service key={node.id} className={node.slug}
+                            as={motion.div}
+                            variants={item}
+                            initial="initialState"
+                            animate="visible"
                         >
 
                             <div className="CardContent">

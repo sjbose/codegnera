@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import LandingPage from '../pages/landingPage';
 import About from '../components/About';
@@ -6,23 +6,39 @@ import ServiceOffered from '../pages/service';
 import Contact from '../pages/contact';
 import Project from '../pages/projects';
 import { motion } from 'framer-motion';
-import { pageTransitionVariants, fadeUp } from '../Animation/index';
-// import Blog from './blog';
-const home = () => {
+import { fadeUp } from '../Animation/index';
+import SocialMedia from '../components/SocialMedia';
+import { Container } from '../styles/home.element';
+
+
+
+
+
+
+const Home = () => {
+
+
     return (
-        <motion.div
+
+
+        <Container as={motion.div}
             variants={fadeUp}
             initial="initialState"
             animate="visible"
             exit="exit"
+
         >
             <LandingPage />
-            <About />
-            <ServiceOffered />
             <Project />
+            <ServiceOffered />
+            <About />
+            <SocialMedia />
+
+
             <Contact />
-        </motion.div>
+        </ Container>
+
     )
 }
 
-export default home;
+export default Home;

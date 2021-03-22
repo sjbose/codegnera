@@ -15,7 +15,8 @@ flex-flow:row wrap;
 justify-content:space-evenly;
 flex: 1 1 auto;
 // margin:50px 0 100px 0;
-padding:100px 0;
+// margin:0 20px;
+padding:100px 20px;
 font-size:2rem;
 
 
@@ -208,7 +209,7 @@ export const Service = styled.div.attrs(props => ({
     & .dots span{
         width: 5px;
         height:5px;
-        background-color: currentColor;
+        // background-color: currentColor;
         border-radius: 50%;
         display:block;
         opacity:0;
@@ -248,7 +249,7 @@ background:rgba(255, 255, 255, 0.151);
 // background: rgba(29, 24, 44, 0.264);
 // background: rgba(87, 79, 113, 0.264);
 // background: rgba(121, 114, 145, 0.264);
-// background:linear-gradient(135deg, #C56CD6 0%,#3425AF 60%);
+
 border:1px solid rgba(159, 159, 159,0.153);
 padding:30px;
 backdrop-filter: blur(50px);
@@ -257,7 +258,7 @@ border-radius:20px;
 box-shadow: 0 0 2rem 0 rgba(black, .4), 0 0 0.5rem 0 rgba(black, .3);
 
         @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
-            padding:20px;
+            padding:10px;
     }
 
 `;

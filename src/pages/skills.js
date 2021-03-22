@@ -19,7 +19,7 @@ const Container = styled.div`
     display:flex;
     flex-flow:row nowrap;
     justify-content:space-around;
-    padding:100px 30px;
+    padding:100px ;
     @media(max-width:${size.mobileL}) and (min-width:${size.mobileS}){
         flex-direction: column;
 

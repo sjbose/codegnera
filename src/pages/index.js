@@ -1,43 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Router } from '@reach/router';
-
-// import backgroundImg from '../assets/images/newbg.svg';
-// import backgroundImg from '../assets/images/bgblue.svg';
 import Home from './home';
 import About from './about';
-
-// import Skills from './skills';
 import Service from './service';
-
 import Contact from './contact';
 import Project from './projects';
-
 import Blog from './blog';
 
 // import { WrapperContainer } from '../styles/Index.elements';
 import SEO from '../components/SEO';
+import Modal from '../components/Modal';
+import { AnimatePresence } from 'framer-motion';
 
-
-
-const index = () => {
+const Index = () => {
+    const [showContactModal, setShowContactModal] = useState(false);
 
 
 
     return (
         <>
             <SEO title="Home" description="This is my home page" />
-            <Router>
-                <Home path="/" />
-                <About path="/about"></About>
-                <Service path="/service" />
-                <Project path="/projects" />
-                <Contact path="/contact" />
-                <Blog path="/blog" />
+            {/* <Modal showContactModal={showContactModal} setShowContactModal={setShowContactModal} /> */}
+            <AnimatePresence exitBeforeEnter>
+                <Router>
 
-            </Router>
+                    <Home path="/" />
+                    <About path="/about"></About>
+                    <Service path="/service" />
+                    <Project path="/projects" />
+                    <Contact path="/contact" />
+                    <Blog path="/blog" />
 
+                </Router>
+            </AnimatePresence>
         </>
     )
 }
 
-export default index
+export default Index

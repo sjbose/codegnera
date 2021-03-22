@@ -15,9 +15,6 @@ const Navbar = () => {
             variants={fromTopVariants}
             initial="initialState"
             animate="visible"
-        // transition={{
-        //     type: "tween"
-        // }}
         >
             <Logo />
 

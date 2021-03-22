@@ -3,7 +3,8 @@ import React from 'react';
 import Img from "gatsby-image/withIEPolyfill";
 import { useStaticQuery, graphql } from 'gatsby';
 import { MoreLink, BlogCard, Container } from '../styles/ArtilclesPage.elements';
-
+import { motion } from 'framer-motion';
+import { fadeUp } from '../Animation/index';
 
 
 
@@ -36,11 +37,7 @@ const Blog = () => {
                 id
                 title
                 fluid(maxWidth: 500, maxHeight:1050, quality:100, cropFocus: TOP) {
-                    aspectRatio
-                    base64
-                    sizes
-                    src
-                    srcSet
+                    ...GatsbyContentfulFluid
                 }
                 }
             }
@@ -53,10 +50,16 @@ const Blog = () => {
     `);
 
     return (
-        <Container>
+        <Container >
             {
                 data.allContentfulArticle.edges.map(({ node }) => (
-                    <BlogCard key={node.id}>
+                    <BlogCard key={node.id}
+                        as={motion.div}
+                        variants={fadeUp}
+                        initial="initialState"
+                        animate="visible"
+                        exit="exit"
+                    >
                         <div className="meta">
                             <Img className="cardImg"
                                 fluid={node.image.fluid}

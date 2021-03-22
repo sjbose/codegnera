@@ -76,10 +76,23 @@ export const ProjectsContainer = styled.div`
     display:flex;
     flex-flow:column nowrap;
     justify-content:space-around;
-    margin:50px 100px 100px 100px;
+    margin:50px 0;
+    padding:0 100px;
     position:relative;
 
     @media(max-width:${size.laptop}) and (min-width:${size.mobileS}){
         margin:20px 0;
+        padding:0 20px;
+    }
+`;
+export const Container = styled.div`
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:space-around;
+    
+    position:relative;
+    padding:50px 0 100px 0;
+    @media(max-width:${size.laptop}) and (min-width:${size.mobileS}){
+        
     }
 `;

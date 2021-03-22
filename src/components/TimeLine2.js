@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { LineUl, LineLi, BadgeWrapper, ComponentsWrapper, Title, SubTitle } from '../styles/TimeLineComponent.element';
 import styled from 'styled-components';
 import BadgeComponent from './BadgeComponent';
 import SQL from '../assets/images/timelineIcons/sql.png';
@@ -19,111 +19,7 @@ import RectangularBadge from './RectagularBadge';
 
 
 
-const size = {
-    mobileS: '320px',
-    mobileM: '375px',
-    mobileL: '425px',
-    tablet: '768px',
-    laptop: '1024px',
-    laptopL: '1440px',
-    desktop: '2560px'
-}
 
-const LineUl = styled.ul`
-    border-left: 4px solid #ACBBCA;
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
-    background: rgba(255, 255, 255, 0.03);
-    color: rgb(97, 97, 97);
-    font-family: 'Chivo', sans-serif;
-    
-    letter-spacing: 0.5px;
-    position: relative;
-    line-height: 1.4em;
-    font-size: 1.13em;
-    padding: 50px;
-    list-style: none;
-    text-align: left;
-    font-weight: 100;
-    max-width: 30%;
-    h1{
-        font-family: 'Saira', sans-serif;
-        letter-spacing: 1.5px;
-        font-weight: 100;
-        font-size: 1.4em;
-    }
-    [data-date]{
-        font-size:16px;
-    }
-    h2,h3{
-        font-family: 'Saira', sans-serif;
-        letter-spacing: 1.5px;
-        font-weight: 400;
-        font-size: 1.4em;
-    }
-    @media(max-width:${size.mobileL}) and (min-width:${size.mobileS}){
-        font-size:1.33em;
-
-    }
-        @media(max-width:${size.laptop}) and (min-width:${size.tablet}){
-        font-size:1.33em;
-
-    }
-`
-const LineLi = styled.li.attrs(props => ({
-    type: props.type || 'li'
-}))`
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
-    width: 220px;
-    padding: 0 0 0 25px;
-    margin-bottom: 50px;
-    position: relative;
-    &:last-of-type{
-        padding-bottom: 0;
-        margin-bottom: 0;
-        border: none;
-    }
-    &:before{
-        left: -217.5px;
-        color: rgb(97, 97, 97);
-        content: attr(data-date);
-        text-align: right;
-        font-weight: 100;
-        font-size: 0.9em;
-        min-width: 120px;
-        font-family: 'Saira', sans-serif;
-    }
-    &:after{
-        box-shadow: 0 0 0 4px #ACBBCA;
-        left: -57.85px;
-        background: #ffffff;
-        border-radius: 50%;
-        height: 11px;
-        width: 11px;
-        content: "";
-        top: 5px;
-    }
-    &:before,&:after{
-        position: absolute;
-        display: block;
-        top: 0;
-    }
-`
-const BadgeWrapper = styled.div`
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content:space-between;
-    padding:8px 0;
-    p{  
-        text-align:center;
-        font-size:18px;
-        padding:'10px'
-    }
-`;
-const ComponentsWrapper = styled.div`
-    display: flex;
-    flex-flow: column nowrap;
-`;
 
 const TimeLine2 = (props) => {
     return (
@@ -164,7 +60,7 @@ const TimeLine2 = (props) => {
                 </LineLi>
                 <LineLi>
                     <h3>Version Control</h3>
-                    <p>Git is a distributed version-control system for tracking changes in any set of files</p>
+
                     <BadgeWrapper>
                         <RectangularBadge imgUrl={Git} />
                     </BadgeWrapper>
@@ -181,14 +77,11 @@ const TimeLine2 = (props) => {
                     <BadgeWrapper>
                         <RectangularBadge imgUrl={Uiux} />
                     </BadgeWrapper>
-                    <p >UX design refers to the term <strong>User experience</strong> , while UI stands for
-                  <strong>user
-                    interface design</strong>. Both elements are
-                  crucial to a product and work closely together.</p>
+
                 </LineLi>
                 <LineLi>
                     <h3>Html,css,js</h3>
-                    <p>html,css,js are basic block of web technology</p>
+
                     <BadgeWrapper>
                         <RectangularBadge imgUrl={HtmlCssJs} />
                     </BadgeWrapper>

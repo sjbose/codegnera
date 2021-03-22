@@ -2,8 +2,8 @@ import React from "react";
 import styled from 'styled-components';
 import { Link } from "gatsby";
 // import { Link } from "@reach/router";
-// import scrollTo from 'gatsby-plugin-smoothscroll';
-import { motion, AnimatePresence } from "framer-motion";
+
+
 
 
 
@@ -52,14 +52,14 @@ const NavbarLinks = () => {
 
 
 
-            <AnimatePresence>
-                <NavItem to="/">Home</NavItem>
-                <NavItem to="/about" >About</NavItem>
-                <NavItem to="/service">Services</NavItem>
-                <NavItem to="/projects">Work</NavItem>
-                <NavItem to="/contact" >Contact</NavItem>
-                <NavItem to="/blog" >Blog</NavItem>
-            </AnimatePresence>
+
+            <NavItem to="/">Home</NavItem>
+            <NavItem to="/about" >About</NavItem>
+            {/* <NavItem to="/service">Services</NavItem> */}
+            <NavItem to="/projects">Work</NavItem>
+            <NavItem to="/contact" >Contact</NavItem>
+            <NavItem to="/blog" >Blog</NavItem>
+
 
 
 

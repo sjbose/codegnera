@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 // import backgroundImg from '../assets/images/newbg.svg';
 // import backgroundImg from '../assets/images/bgblue.svg';
-import backgroundImg from '../assets/images/bgblue1.svg';
+import backgroundImg from '../assets/images/bgFinal.svg';
 
 
 const ContentStyles = styled.div`

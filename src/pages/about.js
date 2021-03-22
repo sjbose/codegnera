@@ -1,28 +1,73 @@
 import React from 'react';
-// import styled from 'styled-components';
-import { Title } from '../styles/AboutComponent.elements';
-import SEO from '../components/SEO';
+import { graphql } from 'gatsby';
+import Img from "gatsby-image/withIEPolyfill";
+import { Container, ProfilePic, TextWrapper, WhitePaper, AboutCloud } from '../styles/AboutPage.elements';
+import Skill from '../pages/skills';
+import { ImportantData } from '../data/about';
+import ImportanceOfWebApp from '../components/ImportanceOfWebApp';
+import Cloud from '../assets/images/aboutCloud.svg';
+import SocialMedia from '../components/SocialMedia';
+
+export const data = graphql`
+            query aboutMe {
+            contentfulAuthor(name: {eq: "Subhajeet Bose(SJ)"}) {
+                id
+                name
+                subtitle
+                title
+                profession
+                about {
+                about
+                }
+                photo {
+                fluid( maxHeight: 200, maxWidth: 200, quality: 100) {
+                    ...GatsbyContentfulFluid
+                }
+                }
+            }
+            }
+
+    `
 
 
 
+const about = (props) => {
 
-
-
-const about2 = () => {
 
 
     return (
-        <div id="about">
-            <SEO>
 
-            </SEO>
+        <Container>
+            <AboutCloud src={Cloud} alt="images" />
 
-            <Title># About</Title>
+            <ProfilePic>
+                <Img
+                    className="profileImg"
+                    fluid={props.data.contentfulAuthor.photo.fluid}
+                    alt="aboutMe"
+                />
+                {/* <h5>{props.data.contentfulAuthor.name}</h5>
+                <p>{props.data.contentfulAuthor.profession}</p> */}
+
+            </ProfilePic>
 
 
+            <WhitePaper>
+                <TextWrapper>
+                    <h3>{props.data.contentfulAuthor.subtitle}</h3>
+                    <p>{props.data.contentfulAuthor.about.about}</p>
+                </TextWrapper>
+            </WhitePaper>
 
-        </div>
+
+            <Skill />
+
+            <ImportanceOfWebApp {...ImportantData} />
+            <SocialMedia />
+
+        </Container>
+
     )
 }
 
-export default about2;
+export default about;

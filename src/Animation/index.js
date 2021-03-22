@@ -6,9 +6,9 @@ export const fromTopVariants = {
     visible: {
         y: 0,
         transition: {
-            delay: 0.2,
-            type: 'spring',
-            stiffness: 80
+            delay: 0.6,
+            type: 'tween',
+            // stiffness: 80
         }
     }
 }
@@ -41,8 +41,8 @@ export const fadeUp = {
         opacity: 1,
         y: 0,
         transition: {
-            type: 'tween',
-            delay: 2
+            type: 'spring',
+            delay: 0.5
         }
     },
     exit: {
@@ -50,5 +50,40 @@ export const fadeUp = {
         transition: {
             ease: 'easeInOut'
         }
+    }
+}
+export const radiatingBtn = {
+    initialState: {
+        opacity: 0.5,
+        transform: {
+            scale: (0.5, 0.5),
+
+        }
+    },
+    visible: {
+        opacity: 0,
+        transform: {
+            scale: (2.5, 2.5),
+
+        }
+    }
+}
+export const radiatingBtnOnHover = {
+    onHover: {
+        scale: 1.5,
+
+    },
+    transition: {
+        type: 'spring',
+        stiffness: 300
+    }
+}
+
+export const backdrop = {
+    initialState: {
+        opacity: 1
+    },
+    hidden: {
+        opacity: 0
     }
 }

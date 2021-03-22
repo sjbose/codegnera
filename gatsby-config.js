@@ -12,7 +12,7 @@ module.exports = {
         author: `sj_bose`,
     },
     plugins: [
-        `gatsby-plugin-smoothscroll`,
+
         `gatsby-plugin-sass`,
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-react-helmet`,
