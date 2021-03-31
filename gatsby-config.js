@@ -63,21 +63,16 @@ module.exports = {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
                 fonts: [
-                    `Roboto mono`, `Montserrat\: 300,500,600,700,900`,
-                    `Pacifico\:300,400,500,600,700`,
 
-                    // `Raleway\:200,300,400,500,600,700,800,900`,
-                    `Lato\:300,400,700,900`,
-                    `Saira+Extra+Condensed\:100,200,300,400,500,600,700,800,900`,
-                    `Saira\:100,200,300,400,500,600,700,800,900`,
+                    `Montserrat\: 300,500,600,700,900`,
                     `Chivo\:300,400,700,900`,
                     `Comfortaa\:300,400,500,600,700`,
                     `Patua+One`,
                     `Bitter\:300,500,600,700,900`,
-                    `Khula\:300,400,600,700,800`,
+
                     `Poppins\:200,300,400,500,600,700,800,900`,
-                    `Oswald\:200,300,400,500,600,700`,
-                    `Oswald\:200,300,400,500,600,700`,
+
+
                     // you can also specify font weights and styles
                 ],
                 display: 'swap'

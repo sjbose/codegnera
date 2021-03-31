@@ -2,7 +2,7 @@ import React from 'react';
 import Img from "gatsby-image/withIEPolyfill";
 import { useStaticQuery, graphql } from "gatsby";
 import { Project, CardContainer } from '../styles/WorkShowCase.elements';
-import { ProjectsContainer, TitleWrapper, Title, SubTitle, TitleContainer, Container } from '../styles/ProjectPage.elements';
+import { ProjectsContainer, TitleWrapper, Title, SubTitle, TitleContainer, Container, Pill, PillContainer } from '../styles/ProjectPage.elements';
 // import WorkShowCase from '../components/WorkShowCase';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -38,7 +38,7 @@ const Projects = () => {
                 slug
                 id
                 icon {
-                    fixed(quality: 100) {
+                    fixed(height:25, width:25, quality: 100) {
                     aspectRatio
                     base64
                     height
@@ -97,11 +97,11 @@ const Projects = () => {
                     <SubTitle>recent projects</SubTitle>
                 </TitleWrapper>
             </TitleContainer>
+            <ProjectsContainer >
+                {data.allContentfulProject.edges.map(({ node }) => (
 
-            {data.allContentfulProject.edges.map(({ node }) => (
-                <ProjectsContainer key={node.id}>
 
-                    <CardContainer>
+                    <CardContainer key={node.id}>
 
                         <div className="CardContent">
                             <h1>{node.title}</h1>
@@ -109,14 +109,23 @@ const Projects = () => {
                             {/* <button>Find more</button> */}
 
                         </div>
+                        <PillContainer>
+                            {node.devtool.map((tool) => (
+                                <Pill key={tool.id}>
+                                    <Img className="icon" fixed={tool.icon.fixed} key={tool.icon.id} alt={tool.icon.title} />
+                                    <p>{tool.title}</p>
+                                </Pill>
+                            ))}
+                        </PillContainer>
+
                         <hr></hr>
-                        <div className="cardWrapper">
+                        <div className="cardWrapper" >
                             <Project key={node.title}>
                                 <Slider {...settings}>
                                     {node.images.map((img) => (
 
-                                        <div>
-                                            <Img fluid={img.fluid} key={img.id} alt={img.title} />
+                                        <div key={img.id}>
+                                            <Img fluid={img.fluid} alt={img.title} />
                                         </div>
 
                                     ))}
@@ -132,9 +141,9 @@ const Projects = () => {
 
 
 
-                </ProjectsContainer>
-            ))}
 
+                ))}
+            </ProjectsContainer>
 
 
 

@@ -1,15 +1,18 @@
 import React from 'react'
 import ImageOne from '../assets/images/VRSaly.svg';
-import { Container, ItemOne, ItemTwo, Title, WhitePaper, AboutWrapper } from '../styles/AboutComponent.elements';
+import { Container, ItemOne, ItemTwo, Title, WhitePaper, AboutWrapper, WrapperImg } from '../styles/AboutComponent.elements';
 
 const About = () => {
     return (
         <AboutWrapper>
             <Title># About</Title>
             <Container>
-                <ItemOne src={ImageOne} alt="Image">
+                <WrapperImg>
+                    <ItemOne src={ImageOne} alt="Image"></ItemOne>
+                </WrapperImg>
 
-                </ItemOne>
+
+
                 <ItemTwo>
                     <WhitePaper>
                         <h3>"A little bit about myself</h3>

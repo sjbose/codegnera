@@ -15,7 +15,7 @@ export const Container = styled.div`
     flex-flow:row nowrap;
     justify-content:space-around;
     font-size:2rem;
-    flex:1 1 auto;
+    // flex:1 1 auto;
     position:relative;
     margin-bottom:50px;
     
@@ -25,10 +25,21 @@ export const Container = styled.div`
         justify-content:center;
     }
 `;
+export const WrapperImg = styled.div`
+display:flex;
+flex-flow:column nowrap;
+justify-content:space-around;
+
+    @media(max-width:${size.laptop}) and(min-width:${size.mobileS}){
+        
+    }
+`;
 export const ItemOne = styled.img`
 margin:0 auto;
+
 width:100%;
 height:600px;
+
 
 
 ` ;
@@ -56,7 +67,8 @@ padding:30px;
 
 ` ;
 export const WhitePaper = styled.div`
-
+width:50vw;
+margin:0 auto;
 position:relative;
 background:rgba(255, 255, 255, 0.451);
 border:1px solid rgba(159, 159, 159,0.153);
@@ -66,7 +78,8 @@ border-radius:20px;
 box-shadow: 0 0 2rem 0 rgba(black, .4), 0 0 0.5rem 0 rgba(black, .3);
 
 @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
-    padding:20px;
+    // padding:20px;
+    width:70vw;
 }
 
 `;

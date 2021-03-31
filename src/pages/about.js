@@ -7,6 +7,10 @@ import { ImportantData } from '../data/about';
 import ImportanceOfWebApp from '../components/ImportanceOfWebApp';
 import Cloud from '../assets/images/aboutCloud.svg';
 import SocialMedia from '../components/SocialMedia';
+import { motion } from 'framer-motion';
+import { fadeUp } from '../Animation/index';
+
+
 
 export const data = graphql`
             query aboutMe {
@@ -40,7 +44,13 @@ const about = (props) => {
         <Container>
             <AboutCloud src={Cloud} alt="images" />
 
-            <ProfilePic>
+            <ProfilePic
+                as={motion.div}
+                variants={fadeUp}
+                initial="initialState"
+                animate="visible"
+                exit="exit"
+            >
                 <Img
                     className="profileImg"
                     fluid={props.data.contentfulAuthor.photo.fluid}
@@ -52,7 +62,13 @@ const about = (props) => {
             </ProfilePic>
 
 
-            <WhitePaper>
+            <WhitePaper
+                as={motion.div}
+                variants={fadeUp}
+                initial="initialState"
+                animate="visible"
+                exit="exit"
+            >
                 <TextWrapper>
                     <h3>{props.data.contentfulAuthor.subtitle}</h3>
                     <p>{props.data.contentfulAuthor.about.about}</p>

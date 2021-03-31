@@ -1,6 +1,6 @@
 import React from 'react';
-import { LineUl, LineLi, BadgeWrapper, ComponentsWrapper, Title, SubTitle } from '../styles/TimeLineComponent.element';
-import styled from 'styled-components';
+import { LineUl, LineLi, BadgeWrapper, ComponentsWrapper } from '../styles/TimeLineComponent.element';
+
 import BadgeComponent from './BadgeComponent';
 import SQL from '../assets/images/timelineIcons/sql.png';
 import MongoDb from '../assets/images/timelineIcons/mongo.png';

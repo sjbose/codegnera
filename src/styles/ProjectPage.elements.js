@@ -96,3 +96,34 @@ export const Container = styled.div`
         
     }
 `;
+export const Pill = styled.div`
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:space-around;
+    align-items:center;
+    width:100px;
+    height:35px;
+    color:rgba(0,0,0,0.7);
+    border-radius:999px;
+    background:rgba(255,255,255,1);
+    border:2px solid rgba(159,126,245,1);
+    padding: 0 8px;
+    text-align: center;
+    text-decoration: none;
+    font:normal 300 0.5em / 1 'Patua One', cursive;
+    margin:10px 5px;
+@media(max-width:${size.laptop}) and (min-width:${size.mobileS}){
+    width:80px;
+    height:25px;
+    padding:5px ;
+    font-size:0.5em;
+    }
+}
+
+`;
+export const PillContainer = styled.div`
+display:flex;
+flex-flow:row wrap;
+justify-content:flex-start;
+
+`;

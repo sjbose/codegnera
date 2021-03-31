@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactTooltip from "react-tooltip";
 // import Tilt from 'react-tilt';
 import OnRocket from '../assets/images/OnrocketNoBGSVG.svg';
@@ -9,13 +9,16 @@ import { BannerImg, Container, TextWrapper, SubDev, RadiatingBtn, RadiatingBtnLi
 import SEO from '../components/SEO';
 
 import { motion } from 'framer-motion';
+import { fadeUp } from '../Animation/index';
 import { radiatingBtnOnHover } from '../Animation/index';
 import arrow from '../assets/images/right-arrow.svg';
 
 
 
-const LandingPage = () => {
-
+const LandingPage = ({ showModal, setShowModal }) => {
+    const openModal = () => {
+        setShowModal(true);
+    };
 
     return (
         <>
@@ -23,7 +26,13 @@ const LandingPage = () => {
                 {/* <title>WELCOME</title> */}
             </SEO>
 
-            <Container id="home">
+            <Container
+                as={motion.div}
+                variants={fadeUp}
+                initial="initialState"
+                animate="visible"
+                exit="exit"
+            >
 
 
                 <BannerImg src={OnRocket} alt="banner image" />
@@ -31,7 +40,7 @@ const LandingPage = () => {
                     <RedMoon src={RedMoonImg} alt="image" />
 
                     <BlobL
-                        as={motion.img} src={BlobSImg} alr="image"
+                        as={motion.img} alr="image"
                         animate={{ rotate: 360 }}
                         transition={{
 
@@ -39,9 +48,9 @@ const LandingPage = () => {
                             duration: 90,
                             repeatType: "mirror",
                         }}
-                        src={BlobLImg} alt="image" />
+                        src={BlobLImg} alt="image1" />
 
-                    <BlobS as={motion.img} src={BlobSImg} alr="image"
+                    <BlobS as={motion.img} src={BlobSImg} alt="image2"
                         animate={{ rotate: 360 }}
                         transition={{
 
@@ -64,16 +73,13 @@ const LandingPage = () => {
                             whileHover="onHover"
                             transition="transition"
                         >
-                            <RadiatingBtnLink to="/projects" >
+                            <RadiatingBtnLink onClick={openModal} >
                                 <img src={arrow} alt="next" />
 
                             </RadiatingBtnLink>
                             <ReactTooltip place="right" >
-                                <h1>Find my work</h1>
-                                <RadiatingBtnLink to="/contact">
-                                    <img src={arrow} alt="next" />
+                                <h1>Let's talk</h1>
 
-                                </RadiatingBtnLink>
                             </ReactTooltip>
                             <div className="circleWave" style={{ animationDelay: '0s' }}
                             ></div>
@@ -89,6 +95,7 @@ const LandingPage = () => {
 
 
                 </TextWrapper>
+
             </Container>
 
 

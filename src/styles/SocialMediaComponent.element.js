@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+
 
 const size = {
     mobileS: '320px',
@@ -61,7 +61,7 @@ export const Container = styled.div`
     position:relative;
     // background:red;
     font-size:2rem;
-    margin:100px auto;
+    margin:100px auto 200px auto;
 
 
 
@@ -73,7 +73,7 @@ export const Container = styled.div`
 `;
 
 export const WhitePaper = styled.div`
-width:80vw;
+width:60vw;
 display:flex;
 flex-flow:column nowrap;
 justify-content:space-between;
@@ -110,7 +110,7 @@ box-shadow: 0 0 2rem 0 rgba(black, .4), 0 0 0.5rem 0 rgba(black, .3);
 }
 
 @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
-
+    width:80vw;
     padding:0;
     & .groupOne{
         flex-direction:column;
@@ -147,6 +147,25 @@ export const SocialButton = styled.a`
     & :hover{
         transform : translateY(-4px);
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    }
+    &:hover.dribble{
+        background:rgba(255, 92, 127,0.9)
+    }
+    &:hover.behance{
+        background:rgba(20, 81, 240,0.7)
+    }
+    &:hover.pinterest{
+        background:rgba(209, 43, 43,0.7)
+    }
+    &:hover.instagram{
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    }
+    &:hover.medium{
+        background:rgba(239, 239, 239,0.7);
+        color:black;
+    }
+    &:hover.twitter{
+        background:rgba(50, 162, 248 ,0.7)
     }
     @media(min-width:${size.mobileS}) and (max-width:${size.tablet}){
         // width:70%;

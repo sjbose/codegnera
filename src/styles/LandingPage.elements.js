@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+
 
 const size = {
     mobileS: '320px',
@@ -81,7 +81,7 @@ export const Container = styled.div`
     margin-bottom:100px;
     overflow:hidden;
 
-    @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
+    @media(max-width:${size.laptop}) and (min-width:${size.mobileS}){
         flex-direction:column;
     }
 `;
@@ -180,7 +180,7 @@ export const RadiatingBtn = styled.div`
         }
 }
 `;
-export const RadiatingBtnLink = styled(Link)`
+export const RadiatingBtnLink = styled.div`
     display:flex;
     flex-direction:column;
     position:relative;

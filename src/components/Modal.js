@@ -1,39 +1,55 @@
-import React from 'react';
+import React from "react";
+import { ModalBox, CloseButton, ModalContent } from "../styles/Modal.elements";
 
+import ContactForm from "./ContactFormCTA";
 
-import { Link } from 'gatsby';
-import { motion, AnimatePresence } from 'framer-motion';
-import { backdrop } from '../Animation/index';
-import { BluredBg } from '../styles/Modal.elements';
+const ModalVariants = {
+    opened: {
+        y: 50
+    },
 
+    closed: { y: 0 }
+};
 
+const ModalContentVariants = {
+    opened: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            delay: 1
+        }
+    },
+    closed: { y: -30, opacity: 0 }
+};
 
-
-
-
-const Modal = ({ showContactModal, setShowContactModal }) => {
-
-    // const toggleModal = (e) => {
-    //     setShowContactModal(!showContactModal)
-    // }
-
+const Modal = ({ showModal, closeModal }) => {
     return (
-        <AnimatePresence exitBeforeEnter>
-            {showContactModal && (
-                <BluredBg as={motion.div}
-                    variants={backdrop}
-                    initial="initialState"
-                    animate="hidden"
-
-                // showContactModal={showContactModal}
-                // onBackgroundClick={toggleModal}
-                // onEscapeKeydown={toggleModal}
+        <>
+            {showModal && (
+                <ModalBox
+                    variants={ModalVariants}
+                    animate={showModal ? "opened" : "closed"}
+                    initial={"closed"}
                 >
 
-                </BluredBg>
+                    <ModalContent
+                        variants={ModalContentVariants}
+                        animate={showModal ? "opened" : "closed"}
+                    >
+                        <h1>Hey! Tell us all<br></br>
+                            the things 👋</h1>
+
+                        <ContactForm />
+                    </ModalContent>
+                    <CloseButton onClick={closeModal}>
+
+                    </CloseButton>
+                </ModalBox>
+
             )}
-        </AnimatePresence>
-    )
-}
+
+        </>
+    );
+};
 
 export default Modal;

@@ -87,3 +87,14 @@ export const backdrop = {
         opacity: 0
     }
 }
+export const onScrollReveal = {
+    initialState: {
+        opacity: 0,
+        y: -250,
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+
+    }
+}
