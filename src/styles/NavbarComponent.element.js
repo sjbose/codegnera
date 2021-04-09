@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Navigation = styled.nav`
-    height: 10vh;
+    height: 11vh;
     display: flex;
     background-color: rgba(255, 255, 255,0.450);
     // position: relative;
@@ -18,7 +18,7 @@ export const Navigation = styled.nav`
 
     @media (max-width: 768px) {
         position: sticky;
-        height: 8vh;
+        height: 9vh;
         top: 0;
         left: 0;
         right: 0;

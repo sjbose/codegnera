@@ -5,7 +5,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 const LogoWrap = styled.div`
     margin: 0;
-    padding:8px;
+    padding:0;
     flex: 0 1 36px;
 
     min-width:4rem;
@@ -19,7 +19,7 @@ const LogoWrap = styled.div`
 const Logo = () => {
     const data = useStaticQuery(graphql`
         query {
-        file(name: { eq: "logo" }, extension: { eq: "png" }) {
+        file(name: { eq: "SquareNewCodegenera" }, extension: { eq: "png" }) {
             childImageSharp {
             fluid(maxWidth:100, pngQuality: 100) {
                 ...GatsbyImageSharpFluid

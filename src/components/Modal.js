@@ -38,12 +38,12 @@ const Modal = ({ showModal, closeModal }) => {
                     >
                         <h1>Hey! Tell us all<br></br>
                             the things 👋</h1>
-
+                        <h3>Choose the type of service you want</h3>
                         <ContactForm />
                     </ModalContent>
-                    <CloseButton onClick={closeModal}>
+                    <CloseButton onClick={closeModal} />
 
-                    </CloseButton>
+
                 </ModalBox>
 
             )}

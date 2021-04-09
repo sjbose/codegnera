@@ -24,7 +24,6 @@ const Index = () => {
             <SEO title="Home" description="This is my home page" />
 
 
-
             <Modal showModal={showModal} closeModal={closeModal} />
 
 
@@ -37,10 +36,6 @@ const Index = () => {
                 <Contact path="/contact" showModal={showModal} setShowModal={setShowModal} />
                 <Blog path="/blog" />
             </Router>
-
-
-
-
 
 
 

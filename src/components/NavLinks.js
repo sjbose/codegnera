@@ -5,9 +5,6 @@ import { Link } from "gatsby";
 
 
 
-
-
-
 const NavItem = styled(Link)`
 
     text-decoration: none;
@@ -16,7 +13,7 @@ const NavItem = styled(Link)`
     white-space: nowrap;
     margin: 0 0.6vw;
     text-transform:capitalize;
-    transition: all 200ms ease-in;
+    transition: all 0.5s ease-in;
     position: relative;
     font:normal 700 1.1rem/1 'Quicksand', sans-serif;
     :after {
@@ -38,7 +35,10 @@ const NavItem = styled(Link)`
         width: 100%;
         }
     }
-
+    &.active{
+        color: goldenrod;
+        text-decoration: underline;
+    }
     @media (max-width: 768px) {
         padding: 20px 0;
         font-size: 1.5rem;
@@ -47,18 +47,17 @@ const NavItem = styled(Link)`
 `
 
 const NavbarLinks = () => {
+
     return (
         <>
 
 
-
-
-            <NavItem to="/">Home</NavItem>
-            <NavItem to="/about" >About</NavItem>
-            {/* <NavItem to="/service">Services</NavItem> */}
-            <NavItem to="/projects">Work</NavItem>
-            <NavItem to="/contact" >Contact</NavItem>
-            <NavItem to="/blog" >Blog</NavItem>
+            <NavItem to="/" activeClassName="active">Home</NavItem>
+            <NavItem to="/about" activeClassName="active">About</NavItem>
+            <NavItem to="/service" activeClassName="active">Services</NavItem>
+            <NavItem to="/projects" activeClassName="active">Work</NavItem>
+            <NavItem to="/contact" activeClassName="active">Contact</NavItem>
+            {/* <NavItem to="/blog" activeClassName="active">Blog</NavItem> */}
 
 
 

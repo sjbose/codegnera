@@ -1,24 +1,19 @@
 import React from 'react';
 import ReactTooltip from "react-tooltip";
 // import Tilt from 'react-tilt';
+import { motion } from 'framer-motion';
+import { fadeUp } from '../Animation/index';
+import SEO from '../components/SEO';
+import { radiatingBtnOnHover } from '../Animation/index';
+import arrow from '../assets/images/right-arrow.svg';
 import OnRocket from '../assets/images/OnrocketNoBGSVG.svg';
 import RedMoonImg from '../assets/images/redMoon.svg';
 import BlobLImg from '../assets/images/c.svg';
 import BlobSImg from '../assets/images/b.svg';
 import { BannerImg, Container, TextWrapper, SubDev, RadiatingBtn, RadiatingBtnLink, BlobL, BlobS, RedMoon } from '../styles/LandingPage.elements';
-import SEO from '../components/SEO';
 
-import { motion } from 'framer-motion';
-import { fadeUp } from '../Animation/index';
-import { radiatingBtnOnHover } from '../Animation/index';
-import arrow from '../assets/images/right-arrow.svg';
+const LandingPage = () => {
 
-
-
-const LandingPage = ({ showModal, setShowModal }) => {
-    const openModal = () => {
-        setShowModal(true);
-    };
 
     return (
         <>
@@ -73,7 +68,7 @@ const LandingPage = ({ showModal, setShowModal }) => {
                             whileHover="onHover"
                             transition="transition"
                         >
-                            <RadiatingBtnLink onClick={openModal} >
+                            <RadiatingBtnLink to="/contact" >
                                 <img src={arrow} alt="next" />
 
                             </RadiatingBtnLink>

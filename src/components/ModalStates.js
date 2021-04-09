@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Modal from '../components/Modal';
-import LandingPage from '../pages/landingPage';
-import About from '../pages/about';
-import Contact from '../pages/contact';
+// import Modal from '../components/Modal';
+// import LandingPage from '../pages/landingPage';
+// import About from '../pages/about';
+// import Contact from '../pages/contact';
 
 
 
@@ -10,16 +10,13 @@ import Contact from '../pages/contact';
 export const ShowModalContext = React.createContext();
 
 
-export const ModalStates = () => {
+export const ModalStates = (props) => {
     const [showModal, setShowModal] = useState(false);
     return (
         <div>
             <ShowModalContext.Provider value={[showModal, setShowModal]}>
 
-                <Modal />
-                <LandingPage />
-                <About />
-                <Contact />
+                {props.children}
 
             </ShowModalContext.Provider>
         </div>

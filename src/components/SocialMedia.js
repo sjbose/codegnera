@@ -34,7 +34,7 @@ const SocialMedia = ({ setShowContactModal }) => {
                 </div>
                 <div className="groupTwo">
 
-                    <SocialButton className="instagram" href="/">Instagram</SocialButton>
+                    <SocialButton className="instagram" href="https://www.instagram.com/sj_bose00/" target="_blank">Instagram</SocialButton>
 
                     <SocialButton className="medium"
                         href="https://medium.com/@sj_bose"

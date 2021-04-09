@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 
@@ -98,19 +99,7 @@ padding-top:100px;
     }
 
 `;
-// export const SubWhat = styled.h5`
-// font:normal 300 1.8em/ 1 'Saira', sans-serif;
-// text-transform:capitalize;
-// padding:0 10px 0 200px ;
-// color: rgba(255, 255, 255, 0.751);
 
-
-// @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
-//     font:normal 500 1.8em/ 1 'Saira', sans-serif;
-//     text-align:center;
-//     padding:10px;
-//     }
-// `;
 
 export const SubDev = styled.h3`
 font:normal 900 4.7em/ 1 'Montserrat', sans- serif;
@@ -180,7 +169,7 @@ export const RadiatingBtn = styled.div`
         }
 }
 `;
-export const RadiatingBtnLink = styled.div`
+export const RadiatingBtnLink = styled(Link)`
     display:flex;
     flex-direction:column;
     position:relative;

@@ -1,32 +1,42 @@
 import React from 'react'
 import { Formik, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-// import '../styles/ContactFromCTA.css';
-import { ContactForm, ContactBlock, Title } from '../styles/ContactFormCTA.elemets';
 
+import { ContactForm } from '../styles/ContactFormCTA.elemets'
 
-
-
+// import SelectOption from '../components/SelectOption'
 
 
 const initialValues = {
-    option: '',
+    choice: [],
     name: '',
     email: '',
-    message: ''
+    message: '',
+
 }
 const validationSchema = Yup.object({
     name: Yup.string().required('Required'),
     email: Yup.string().email('Invalid format'),
-    message: Yup.string().required('Required')
+    message: Yup.string().required('Required'),
+    // choice: Yup.array()
+    //     .min(1, 'Pick at least 1 tags')
+    //     .of(
+    //         Yup.object().shape({
+    //             label: Yup.string().required(),
+    //             value: Yup.string().required(),
+    //         })
+    //     ),
 })
 
-const onSubmit = values => {
+const onSubmit = (values, submitProps) => {
     console.log('Form data', values);
+    // onSubmitProps.setSubmitting(false)
+    submitProps.resetForm()
 }
 
 
 const ContactFormCTA = () => {
+
     return (
         <Formik
             initialValues={initialValues}
@@ -34,9 +44,15 @@ const ContactFormCTA = () => {
             onSubmit={onSubmit}
         >
             <ContactForm>
+                {/* <div className='formControl'>
+                    <label htmlFor="choice" style={{ display: 'none' }}>Interested in</label>
+
+                    <SelectOption id='choice' name='choice' as='select' />
+                    <ErrorMessage name='choice' />
+                </div> */}
                 <div className='formControl'>
-                    <h3>I'm interested in..</h3>
-                    <label htmlFor='name'></label>
+
+                    <label htmlFor='name' style={{ display: 'none' }}>name</label>
 
                     <Field type='text' id='name' name='name'
                         placeholder='Name' />
@@ -44,9 +60,9 @@ const ContactFormCTA = () => {
                     <ErrorMessage name='name' />
 
                 </div>
-                <div className='formControl'>
+                <div className='formControl' >
 
-                    <label htmlFor='email'></label>
+                    <label htmlFor='email' style={{ display: 'none' }}>email</label >
 
                     <Field type='text' id='email' name='email'
                         placeholder='Email'
@@ -57,17 +73,17 @@ const ContactFormCTA = () => {
                 </div>
                 <div className='formControl'>
 
-                    <label htmlFor='message'></label>
+                    <label htmlFor='message' style={{ display: 'none' }}>message</label>
 
                     <Field as='textarea' id='message' name='message'
-                        placeholder='Tell us something about you project' />
+                        placeholder='Tell us something about your project' />
 
                     <ErrorMessage name='message' />
 
                 </div>
 
 
-                <button type='submit'></button>
+                <button type='submit' aria-label="submit">Submit</button>
             </ContactForm>
 
         </Formik>

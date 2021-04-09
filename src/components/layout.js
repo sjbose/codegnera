@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import GlobalStyles from '../styles/GlobalStyles';
 import Navbar from './Navbar';
 import Footer from './Footer';
-// import backgroundImg from '../assets/images/newbg.svg';
-// import backgroundImg from '../assets/images/bgblue.svg';
 import backgroundImg from '../assets/images/bgFinal.svg';
 
 
@@ -25,9 +23,9 @@ const Layout = ({ children }) => {
             <ContentStyles>
 
                 {children}
-
+                <Footer />
             </ContentStyles>
-            <Footer />
+
 
         </>
     )

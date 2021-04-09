@@ -46,6 +46,7 @@ const ServiceOffered = () => {
                 ...GatsbyContentfulFluid
         }
             }
+            mainService
         }
         }
     }
@@ -71,9 +72,9 @@ const ServiceOffered = () => {
                 <TitleWrapper>
                     <Title># Services</Title>
                     <SubTitle>
-                        Type of services i do provide
-                </SubTitle>
-                    <SubPara>I can help you to build your the unique ideas by converting them into elegant designs, awesome experiences and catchy brands.</SubPara>
+                        Type of services provided
+                    </SubTitle>
+                    <SubPara>Build your the unique ideas by converting them into elegant designs, awesome experiences and catchy brands.</SubPara>
                 </TitleWrapper>
             </TitleContainer>
 

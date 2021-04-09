@@ -1,36 +1,26 @@
 import React from 'react';
-
-import { Container, Wrapper, TextWrapper, Title, SubTitle, ContactSally, ChatButton } from '../styles/ContactPage.elements';
 import { motion } from 'framer-motion';
 import { fadeUp } from '../Animation/index';
+import { Container, Wrapper, Title, SubTitle } from '../styles/ContactPage.elements'
+import ContactFormCTA from '../components/ContactFormCTA'
 
 
 
 
+const Contact = () => {
 
-
-const Contact = ({ showModal, setShowModal }) => {
-
-    const openModal = () => {
-        setShowModal(true);
-    };
     return (
-        <Container id="contact"
-            as={motion.div}
-            variants={fadeUp}
-            initial="initialState"
-            animate="visible"
-            exit="exit"
-        >
-            <Wrapper>
-                <TextWrapper>
-                    <Title>Share your<br></br>
-                        idea 👋</Title>
-                    <SubTitle>let me help you to build<br /> your online presence strong</SubTitle>
-                    <ChatButton onClick={openModal}>LET'S TALK</ChatButton>
-                </TextWrapper>
-                <ContactSally />
+        <Container
 
+        >
+            <Wrapper as={motion.div}
+                variants={fadeUp}
+                initial="initialState"
+                animate="visible"
+                exit="exit">
+                <Title>Hey! Tell us about<br></br>your project 👋</Title>
+                <SubTitle>Describe the type of service you want</SubTitle>
+                <ContactFormCTA />
             </Wrapper>
 
 

@@ -47,7 +47,7 @@ export const ProfilePic = styled.div`
     width:250px;
     height:250px;
     padding:40px 0;
-    margin:50px 0 20px 0;
+    margin:50px 0 0 0;
 
     & h5{
         font:normal 400 1.5em / 1 'Patua One', cursive;
@@ -93,7 +93,7 @@ padding:50px;
 // backdrop-filter: blur(50px);
 border-radius:20px;
 box-shadow: 0 0 2rem 0 rgba(black, .4), 0 0 0.5rem 0 rgba(black, .3);
-margin: ${props => props.extraWidth ? "50px 100px" : "30px 250px"};
+margin: ${props => props.extraWidth ? "0 100px" : "0 250px"};
 
 
 @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){

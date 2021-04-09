@@ -24,7 +24,8 @@ font-size:2rem;
 export const TitleContainer = styled.div`
 display:flex;
 flex-flow:row wrap;
-justify-content:flex-end;
+padding:80px 0 0 0;
+justify-content:flex-start;
     @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
             
             justify-content:space-around;
@@ -47,9 +48,9 @@ width:50vw;
 `;
 export const Title = styled.h1`
     font: normal 900 4em/ 1 'Montserrat', sans- serif;
-    text-align:right;
-    // margin-right:100px;
-    margin-right:80px;
+    text-align:left;
+    
+    margin-left:80px;
     color: rgba(255, 255, 255, 0.651);
     // background-color: #587370;
     // background:linear-gradient(165deg, #f02fc2 0%,#6094ea 100%);
@@ -67,8 +68,8 @@ export const Title = styled.h1`
 `;
 export const SubTitle = styled.p`
     font: normal 700 1.9em/ 1 'Montserrat', sans- serif;
-    text-align:right;
-    margin-right:80px;
+    text-align:left;
+    margin-left:80px;
     padding-top:10px;
     color: rgba(255, 255, 255, 0.651);
     text-transform:lowercase;
@@ -82,8 +83,8 @@ export const SubTitle = styled.p`
 `;
 export const SubPara = styled.p`
     font: normal 300 1.2em/ 1 'Montserrat', sans- serif;
-    text-align:right;
-    margin-right:80px;
+    text-align:left;
+    margin-left:80px;
     padding-top:10px;
     color: rgba(255, 255, 255, 0.451);
     text-transform:lowercase;
@@ -122,7 +123,7 @@ export const Service = styled.div.attrs(props => ({
     }
 
     // margin-bottom:50px;
-    width:220px;
+    width:240px;
     height:300px;
     margin:50px 0;
     background-color:#99aeff;
@@ -136,7 +137,7 @@ export const Service = styled.div.attrs(props => ({
     color:white;
     font-family:'Roboto';
     border-radius:20px;
-    padding:0 10px;
+    // padding:0 10px;
     // border:1px solid rgba(187, 186, 186, 0.451);
     // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     
@@ -253,7 +254,7 @@ background:rgba(255, 255, 255, 0.151);
 border:1px solid rgba(159, 159, 159,0.153);
 padding:30px;
 backdrop-filter: blur(50px);
-opacity:0.80;
+// opacity:0.80;
 border-radius:20px;
 box-shadow: 0 0 2rem 0 rgba(black, .4), 0 0 0.5rem 0 rgba(black, .3);
 

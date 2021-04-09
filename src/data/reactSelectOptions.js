@@ -1,0 +1,15 @@
+export const colourOptions = [
+  { value: 'Web design', label: 'Web design', color: '#00B8D9', isFixed: true },
+  { value: 'CMS', label: 'CMS', color: '#0052CC' },
+  // { value: 'CMS', label: 'CMS', color: '#0052CC', isDisabled: true },
+  { value: 'Database integration', label: 'Database integration', color: '#5243AA' },
+  // { value: 'red', label: 'Red', color: '#FF5630', isFixed: true },
+  { value: 'Backend', label: 'Backend', color: '#FF8B00' },
+  { value: 'Graphics', label: 'Graphics', color: '#FFC400' },
+  { value: 'SEO', label: 'SEO', color: '#C98A3A' },
+  { value: 'Payment portal', label: 'Payment portal', color: '#36B37E' },
+  { value: 'Wix, Squarespace, Webbly', label: 'Wix, Squarespace, Webbly', color: '#00875A' },
+  { value: 'Blog', label: 'Blog', color: '#253858' },
+  { value: 'Website redesign', label: 'Website redesign', color: '#666666' },
+  { value: 'Other', label: 'Other', color: '#666666' },
+];

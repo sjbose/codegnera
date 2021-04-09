@@ -17,7 +17,7 @@ export const ModalBox = styled(motion.div)`
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.8),
     0 0 0 1px rgba(255, 255, 255, 0.8);
   border-radius: 4px;
-  // padding: 6rem 0 0 6rem;
+  
   position:fixed;
   z-index: 5;
   top:-50px;
@@ -25,11 +25,11 @@ export const ModalBox = styled(motion.div)`
   left:0;
   width: 100% ;
   height: 100%;
-  margin:0 auto;
+  // margin:0 auto;
   display: flex;
   flex-flow:column nowrap;
   justify-content: space-around;
-  align-items: center;
+  padding:0 100px;
   background: #fff;
 
 
@@ -56,8 +56,8 @@ export const Container = styled.div`
 export const CloseButton = styled.button`
     
     position:absolute;
-    top:15%;
-    right:10%;
+    top:20%;
+    right:20%;
 
     // font:normal 400 1.5em/1 'Patua One', cursive;
     // background:#3bb75e;
@@ -100,9 +100,17 @@ justify-content:flex-start;
     }
   }
   & h3{
-    font:normal 500 2.5em/1 'Poppins', sans-serif;
+    font:normal 500 2em/1 'Poppins', sans-serif;
     color:rgba(207, 206, 204 ,1);
     margin:30px 0 50px 0;
+
+    @media(max-width:${size.laptop}) and (min-width:${size.mobileS}){
+      justify-content:center;
+      align-items:center;
+      font: normal 300 1.5em/ 1 'Poppins', sans-serif;
+      margin:0;
+      padding:0 50px;
+    }
   }
 
 `;

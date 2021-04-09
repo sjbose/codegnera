@@ -8,7 +8,7 @@ module.exports = {
         description: `We build business application for your business needs`,
         url: "https://www.codegenera.in",
         twitterUsername: `@sj_bose`,
-        image: "/assets/images/logo.png",
+        image: "/assets/images/SquareNewCodegenera.png",
         author: `sj_bose`,
     },
     plugins: [
@@ -56,7 +56,7 @@ module.exports = {
                 background_color: `#ECF0F3`,
                 theme_color: `#5352ED`,
                 display: `minimal-ui`,
-                icon: `src/assets/images/logo.png`, // This path is relative to the root of the site.
+                icon: `src/assets/images/whiteIcon.png`, // This path is relative to the root of the site.
             },
         },
         {
