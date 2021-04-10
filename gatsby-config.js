@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
     siteMetadata: {
         title: `Codegenera`,
-        description: `We build business application for your business needs`,
+        description: `We build business application for your business needs.Type of services we provide eg: Static website,CMS,Backend, Payment portal, Graphics,Database integration with your existed system , Ui development, Site redesign`,
         url: "https://www.codegenera.in",
         twitterUsername: `@sj_bose`,
         image: "/assets/images/SquareNewCodegenera.png",

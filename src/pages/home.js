@@ -7,7 +7,7 @@ import Contact from '../components/contactHome';
 import Project from '../pages/projects';
 import SocialMedia from '../components/SocialMedia';
 import { Container } from '../styles/home.element';
-
+import SEO from '../components/SEO'
 
 
 
@@ -19,6 +19,9 @@ const Home = ({ showModal, setShowModal }) => {
     return (
 
         <Container>
+            <SEO > <title>WELCOME</title></SEO>
+
+
             <LandingPage showModal={showModal} setShowModal={setShowModal} />
             <Project />
             <ServiceHome />

@@ -3,13 +3,12 @@ import Img from "gatsby-image/withIEPolyfill";
 import { useStaticQuery, graphql } from "gatsby";
 import { Project, CardContainer } from '../styles/WorkShowCase.elements';
 import { ProjectsContainer, TitleWrapper, Title, SubTitle, TitleContainer, Container, Pill, PillContainer } from '../styles/ProjectPage.elements';
-// import WorkShowCase from '../components/WorkShowCase';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from 'framer-motion';
 import { fadeUp } from '../Animation/index';
-
+import SEO from '../components/SEO'
 
 
 const Projects = () => {
@@ -91,6 +90,7 @@ const Projects = () => {
             animate="visible"
             exit="exit"
         >
+            <SEO title="work"></SEO>
             <TitleContainer>
                 <TitleWrapper>
                     <Title>Work</Title>

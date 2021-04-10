@@ -9,7 +9,7 @@ import Cloud from '../assets/images/aboutCloud.svg';
 import SocialMedia from '../components/SocialMedia';
 import { motion } from 'framer-motion';
 import { fadeUp } from '../Animation/index';
-
+import SEO from '../components/SEO'
 
 
 export const data = graphql`
@@ -42,6 +42,7 @@ const about = (props) => {
     return (
 
         <Container>
+            <SEO title="about"></SEO>
             <AboutCloud src={Cloud} alt="images" />
 
             <ProfilePic

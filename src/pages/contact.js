@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { fadeUp } from '../Animation/index';
 import { Container, Wrapper, Title, SubTitle } from '../styles/ContactPage.elements'
 import ContactFormCTA from '../components/ContactFormCTA'
-
+import SEO from '../components/SEO'
 
 
 
@@ -13,6 +13,7 @@ const Contact = () => {
         <Container
 
         >
+            <SEO title="contact"></SEO>
             <Wrapper as={motion.div}
                 variants={fadeUp}
                 initial="initialState"

@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { fadeUp } from '../Animation/index';
 import { WhitePaper, Service, SubPara, Title, SubTitle, TitleWrapper, TitleContainer, ServiceWrapper } from '../styles/ServicePage.elements';
 import { motion } from 'framer-motion'
-
+import SEO from '../components/SEO'
 
 
 
@@ -68,6 +68,7 @@ const ServiceOffered = () => {
             animate="visible"
             exit="exit"
         >
+            <SEO title="services"></SEO>
             <TitleContainer>
                 <TitleWrapper>
                     <Title># Services</Title>

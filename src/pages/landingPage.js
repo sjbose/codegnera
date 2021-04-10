@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactTooltip from "react-tooltip";
-// import Tilt from 'react-tilt';
+import Tilt from 'react-tilt';
 import { motion } from 'framer-motion';
 import { fadeUp } from '../Animation/index';
 import SEO from '../components/SEO';
@@ -18,7 +18,7 @@ const LandingPage = () => {
     return (
         <>
             <SEO title="home">
-                {/* <title>WELCOME</title> */}
+                <title>WELCOME</title>
             </SEO>
 
             <Container
@@ -29,8 +29,10 @@ const LandingPage = () => {
                 exit="exit"
             >
 
+                <Tilt>
+                    <BannerImg src={OnRocket} alt="banner image" />
+                </Tilt>
 
-                <BannerImg src={OnRocket} alt="banner image" />
                 <div className="bannerImgs">
                     <RedMoon src={RedMoonImg} alt="image" />
 
