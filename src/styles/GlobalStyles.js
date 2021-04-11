@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-// import bckimg from './../assets/images/newbg.svg';
+
 
 const GlobalStyles = createGlobalStyle`
     :root{
