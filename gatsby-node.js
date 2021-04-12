@@ -41,3 +41,20 @@
 //     })
 //   }
 // }
+exports.onCreatePage = async ({ page, actions }) => {
+    const { createPage, deletePage } = actions;
+
+    // Look for /404/ path
+    if (page.path.match(/^\/404\/$/)) {
+        const oldPage = { ...page };
+
+        // Add page context
+        page.context = {
+            foo: 'bar'
+        };
+
+        // Recreate the modified page
+        deletePage(oldPage);
+        createPage(page)
+    }
+};
