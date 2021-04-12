@@ -9,4 +9,4 @@ export function wrapPageElement({ element, props }) {
             {element}
         </Layout>
     );
-} 
+}
