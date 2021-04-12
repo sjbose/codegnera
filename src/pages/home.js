@@ -13,7 +13,7 @@ import SEO from '../components/SEO'
 
 
 
-const Home = ({ showModal, setShowModal }) => {
+const Home = () => {
 
 
     return (
@@ -22,14 +22,14 @@ const Home = ({ showModal, setShowModal }) => {
             <SEO > <title>WELCOME</title></SEO>
 
 
-            <LandingPage showModal={showModal} setShowModal={setShowModal} />
+            <LandingPage />
             <Project />
             <ServiceHome />
             <About />
             <SocialMedia />
 
 
-            <Contact showModal={showModal} setShowModal={setShowModal} />
+            <Contact />
         </ Container>
 
     )

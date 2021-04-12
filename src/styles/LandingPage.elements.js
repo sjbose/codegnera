@@ -1,16 +1,8 @@
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import { size } from '../styles/sizes.element'
 
 
-const size = {
-    mobileS: '320px',
-    mobileM: '375px',
-    mobileL: '425px',
-    tablet: '768px',
-    laptop: '1024px',
-    laptopL: '1440px',
-    desktop: '2560px'
-}
 export const BannerImg = styled.img`
         display:flex,
         cursor:pointer,

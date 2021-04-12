@@ -11,6 +11,10 @@ query ($slug: String!) {
   contentfulArticle(slug: {eq: $slug}) {
     name
     subtitle
+    articleBody {
+      articleBody
+      id
+    }
     slug
     tags
     id
@@ -43,6 +47,7 @@ const article = (props) => {
   return (
     <div>
       <h1>{props.data.contentfulArticle.name}</h1>
+      <p> {props.data.contentfulArticle.articleBody.articleBody}</p>
     </div>
   )
 }

@@ -2,17 +2,7 @@ import styled from 'styled-components';
 import rightArrow from '../assets/images/right-arrow.png';
 import { Form } from 'formik';
 import Select from 'react-select';
-
-const size = {
-    mobileS: '320px',
-    mobileM: '375px',
-    mobileL: '425px',
-    tablet: '768px',
-    laptop: '1024px',
-    laptopL: '1440px',
-    desktop: '2560px'
-}
-
+import { size } from '../styles/sizes.element'
 
 export const ContactForm = styled(Form)`
     // display:flex;
