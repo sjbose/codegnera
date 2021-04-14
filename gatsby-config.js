@@ -1,3 +1,4 @@
+
 const path = require(`path`)
 require('dotenv').config({
     path: `.env`,
@@ -6,7 +7,7 @@ module.exports = {
     siteMetadata: {
         title: `Codegenera`,
         description: `We build business application for your business needs.Type of services we provide eg: Static website,CMS,Backend, Payment portal, Graphics,Database integration with your existed system , Ui development, Site redesign`,
-        url: "https://www.codegenera.in",
+        url: `https://www.codegenera.in`,
         twitterUsername: `@sj_bose`,
         image: "/assets/images/SquareNewCodegenera.png",
         author: `sj_bose`,
@@ -36,6 +37,7 @@ module.exports = {
             options: {
                 spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
                 accessToken: process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN,
+                forceFullSync: true,
             },
         },
 
