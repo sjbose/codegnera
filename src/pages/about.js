@@ -3,8 +3,8 @@ import { graphql } from 'gatsby';
 import Img from "gatsby-image/withIEPolyfill";
 import { Container, ProfilePic, TextWrapper, WhitePaper, AboutCloud } from '../styles/AboutPage.elements';
 import Skill from '../pages/skills';
-import { ImportantData } from '../data/about';
-import ImportanceOfWebApp from '../components/ImportanceOfWebApp';
+// import { ImportantData } from '../data/about';
+// import ImportanceOfWebApp from '../components/ImportanceOfWebApp';
 import Cloud from '../assets/images/aboutCloud.svg';
 import SocialMedia from '../components/SocialMedia';
 import { motion } from 'framer-motion';
@@ -79,7 +79,7 @@ const about = (props) => {
 
             <Skill />
 
-            <ImportanceOfWebApp {...ImportantData} />
+            {/* <ImportanceOfWebApp {...ImportantData} /> */}
             <SocialMedia />
 
         </Container>
