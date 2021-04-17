@@ -6,7 +6,7 @@ import Service from './service';
 import Contact from './contact';
 import Project from './projects';
 // import Blog from './blog';
-import SEO from '../components/SEO';
+// import SEO from '../components/SEO';
 
 
 
@@ -16,7 +16,7 @@ const Index = () => {
     return (
 
         <>
-            <SEO title="Home" description="we build  Static website,CMS,Backend, Payment portal, Graphics,Database integration with your existed system , Ui development,  redesign old sites" />
+            {/* <SEO title="" description="we build  Static website,CMS,Backend, Payment portal, Graphics,Database integration with your existed system , Ui development,  redesign old sites" /> */}
 
 
 

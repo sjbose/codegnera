@@ -17,7 +17,7 @@ const LandingPage = () => {
 
     return (
         <>
-            <SEO title="home">
+            <SEO >
                 <title>WELCOME</title>
             </SEO>
 
@@ -36,26 +36,28 @@ const LandingPage = () => {
                 <div className="bannerImgs">
                     <RedMoon src={RedMoonImg} alt="image" />
 
-                    <BlobL
-                        as={motion.img} alr="image"
-                        animate={{ rotate: 360 }}
-                        transition={{
+                    <div className="BlobContainer">
+                        <BlobL
+                            as={motion.img} alr="image"
+                            animate={{ rotate: 360 }}
+                            transition={{
 
-                            repeat: 3,
-                            duration: 90,
-                            repeatType: "mirror",
-                        }}
-                        src={BlobLImg} alt="image1" />
+                                repeat: 3,
+                                duration: 90,
+                                repeatType: "mirror",
+                            }}
+                            src={BlobLImg} alt="image1" />
 
-                    <BlobS as={motion.img} src={BlobSImg} alt="image2"
-                        animate={{ rotate: 360 }}
-                        transition={{
+                        <BlobS as={motion.img} src={BlobSImg} alt="image2"
+                            animate={{ rotate: 360 }}
+                            transition={{
 
-                            repeat: 3,
-                            duration: 80,
-                            repeatType: "mirror",
-                        }}
-                    />
+                                repeat: 3,
+                                duration: 80,
+                                repeatType: "mirror",
+                            }}
+                        />
+                    </div>
 
 
                 </div>
@@ -63,7 +65,7 @@ const LandingPage = () => {
 
                 <TextWrapper>
 
-                    <SubDev>Design, Develop & Create an Identity for your Product</SubDev>
+                    <SubDev>Design, Develop & Create an Identity for Your Product</SubDev>
                     <RadiatingBtn data-tip="Find my works">
                         <motion.div className="circleEmit"
                             variants={radiatingBtnOnHover}

@@ -31,15 +31,18 @@ margin:0 auto;
 
 width:100%;
 height:600px;
-
+// background:green;
 
 
 ` ;
 export const ItemTwo = styled.div`
 display:flex;
 flex-flow:column nowrap;
-padding:30px;
-
+justify-content:center;
+align-items:center;
+// margin:0 auto;
+// padding:30px;
+// background:red;
 
     & h3{
         font:normal 400 1.4em / 1 'Patua One', cursive;
@@ -53,7 +56,7 @@ padding:30px;
 
     }
     @media(max-width:${size.laptop}) and(min-width:${size.mobileS}){
-        padding:5px;
+        // padding:5px;
 
     }
 
@@ -64,7 +67,7 @@ margin:0 auto;
 position:relative;
 background:rgba(255, 255, 255, 0.451);
 border:1px solid rgba(159, 159, 159,0.153);
-padding:30px;
+padding:20px 30px;
 backdrop-filter: blur(50px);
 border-radius:20px;
 box-shadow: 0 0 2rem 0 rgba(black, .4), 0 0 0.5rem 0 rgba(black, .3);
@@ -72,6 +75,7 @@ box-shadow: 0 0 2rem 0 rgba(black, .4), 0 0 0.5rem 0 rgba(black, .3);
 @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
     // padding:20px;
     width:70vw;
+    margin:0 auto;
 }
 
 `;

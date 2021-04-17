@@ -39,6 +39,12 @@ padding:80px 0;
     padding:20px 0;
     color: rgba(255, 255, 255, 0.651);
 }
+    @media(max-width:${size.laptop}) and (min-width:${size.mobileS}){
+        h3{
+            margin:0 auto;
+            padding:20px 0 0 0;
+        }
+    }
 
 `;
 export const Title = styled.h1`
@@ -50,7 +56,7 @@ export const Title = styled.h1`
 
 
     @media(max-width:${size.laptop}) and (min-width:${size.mobileS}){
-            font: normal 900 2.8em/ 1 'Montserrat', sans- serif;
+            font: normal 900 2.5em/ 1 'Montserrat', sans- serif;
             text-align:center;
             margin:0;
     }
@@ -67,24 +73,26 @@ export const SubTitle = styled.p`
 
 
     @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
-            font: normal 500 1.4em/ 1 'Montserrat', sans- serif;
+            font: normal 500 1.2em/ 1 'Montserrat', sans- serif;
             text-align:center;
-            margin:0;
+            margin:0 auto;
     }
 `;
 
 export const ContactSally = styled.div`
 display:flex;
-
+// justify-content:center;
+// align-items:center;
+margin: 0 auto;
 width:600px;
 height:700px;
 background-image:url(${contactSally});
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-
+// background:green;
 @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
-    width:370px;
+    width:300px;
     height:400px;
 `;
 export const ChatButton = styled(Link)`

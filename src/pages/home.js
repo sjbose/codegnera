@@ -19,7 +19,7 @@ const Home = () => {
     return (
 
         <Container>
-            <SEO > <title>WELCOME</title></SEO>
+            <SEO title="Welcome"></SEO>
 
 
             <LandingPage />

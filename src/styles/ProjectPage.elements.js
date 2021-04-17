@@ -67,7 +67,7 @@ export const ProjectsContainer = styled.div`
     display:flex;
     flex-flow:column nowrap;
     justify-content:space-around;
-    margin:50px 0;
+    margin:50px 0 ;
     padding:0 100px;
     position:relative;
 
@@ -96,8 +96,8 @@ export const Pill = styled.div`
     height:35px;
     color:rgba(0,0,0,0.7);
     border-radius:999px;
-    background:rgba(255,255,255,1);
-    border:2px solid rgba(159,126,245,1);
+    background:rgba(221, 220, 218,1);
+    border:3.4px solid rgba(97, 105, 127,1);
     padding: 0 8px;
     text-align: center;
     text-decoration: none;

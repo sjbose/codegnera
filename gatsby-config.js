@@ -73,6 +73,7 @@ module.exports = {
                     `Bitter\:300,500,600,700,900`,
 
                     `Poppins\:200,300,400,500,600,700,800,900`,
+                    `Fira+Sans\:200,300,400,500,600,700,800,900`,
 
 
                     // you can also specify font weights and styles

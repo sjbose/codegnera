@@ -6,10 +6,11 @@ import { size } from '../styles/sizes.element'
 export const BannerImg = styled.img`
         display:flex,
         cursor:pointer,
-        width:800px;
+        width:50%;
         height:600px;
         align-items:center;
-        justify-content:center,
+        justify-content:center;
+        // background:red;
         z-index:5;
 
 
@@ -31,8 +32,8 @@ export const BannerImg = styled.img`
 export const BlobL = styled.img`
         position:absolute;
         top:0;
-        right:0;
-        width:45%;
+        right:10%;
+        width:42%;
         z-index:0;
     @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
         display:none;
@@ -40,8 +41,8 @@ export const BlobL = styled.img`
 export const BlobS = styled.img`
         position:absolute;
         top:0;
-        right:0;
-        width:45%;
+        right:10%;
+        width:42%;
         // width:600px;
         // height:700px;
         z-index:0;
@@ -55,8 +56,8 @@ export const BlobS = styled.img`
 export const RedMoon = styled.img`
         position:absolute;
         top:0;
-        right:0;
-        width:30%;
+        right:5%;
+        width:25%;
         z-index:1;
     @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
         width:40%;
@@ -72,17 +73,20 @@ export const Container = styled.div`
     padding:100px 0;
     position:relative;
     margin-bottom:100px;
-    overflow:hidden;
+    // overflow:hidden;
 
     @media(max-width:${size.laptop}) and (min-width:${size.mobileS}){
         flex-direction:column;
     }
+&.BlobContainer{
+    position:relative;
+}
 `;
 export const TextWrapper = styled.div`
 display:flex;
 flex-flow:column nowrap;
 // background:blue;
-padding-top:100px;
+// padding-top:100px;
 
 
 @media(max-width:${size.tablet}) and (min-width:${size.mobileS}){
@@ -94,16 +98,19 @@ padding-top:100px;
 
 
 export const SubDev = styled.h3`
-font:normal 900 4.7em/ 1 'Montserrat', sans- serif;
+font:normal 900 6em/ 1 'Fira Sans', sans-serif;;
 // text-transform:capitalize;
-// padding:0 50px 50px 0;
-padding:0 100px 0 200px;
+letter-spacing: 5px;
+padding:0 100px 0 100px;
 color: rgba(255, 255, 255, 0.651);
 z-index:2;
 @media(max-width:${size.laptop}) and (min-width:${size.mobileS}){
-    font:normal 900 3.5em/ 1 'Montserrat', sans-serif;
+    font:normal 900 2.8em/ 1 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    padding:0;
+    margin:0 auto;
     text-align:center;
-    padding:50px;
+    
     color: rgba(193, 193, 193,0.854);
     }
 `;

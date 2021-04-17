@@ -90,7 +90,7 @@ const Projects = () => {
             animate="visible"
             exit="exit"
         >
-            <SEO title="work"></SEO>
+            <SEO description="we build  Static website,CMS,Backend, Payment portal, Graphics,Database integration with your existed system , Ui development,  redesign old sites" />
             <TitleContainer>
                 <TitleWrapper>
                     <Title>Work</Title>

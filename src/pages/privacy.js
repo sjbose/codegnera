@@ -1,12 +1,13 @@
 import React from 'react'
 import { Container } from '../styles/privacy.elements'
-
+import SEO from '../components/SEO'
 
 
 
 const Privacy = () => {
     return (
         <Container>
+            <SEO title="Privacy" />
             <h1>Privacy Policy</h1>
             <h3>Effective date: April 7, 2021</h3>
             <p>Codegenera("us", "we", or "our") operates the https://www.codegenera.in/ website (the "Service").

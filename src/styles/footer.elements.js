@@ -8,8 +8,8 @@ export const Container = styled.div`
 display:flex;
 flex-flow:row nowrap;
 justify-content:space-around;
-padding:100px 0 50px 0;
-overflow:hidden;
+// padding:100px 0 50px 0;
+// overflow:hidden;
 background: linear-gradient(105.09deg, #363594 21.36%, #2E246B 72.31%, rgba(46, 36, 107, 0.68) 90.44%);
 @media(min-width:${size.mobileS}) and (max-width:${size.tablet}){
     flex-direction:column-reverse;
@@ -23,7 +23,7 @@ display:flex;
 flex-flow:column nowrap;
 justify-content:center;
 align-items:center;
-padding:0 0 50px 0;
+// padding:0 0 50px 0;
 & p{
     font:normal 300 0.9em / 1 'Poppins',sans-serif;
     color:white;
@@ -36,23 +36,24 @@ padding:0 0 50px 0;
 export const ColTwo = styled.div`
 display:flex;
 flex-flow:row nowrap;
-justify-content:space-around;
+justify-content:space-evenly;
 // background:white;
 
 @media(min-width:${size.mobileS})and(max-width:${size.laptop}){
     flex-direction: column;
+    justify-content:center;
 }
 
 `;
 export const SubCol = styled.div`
 display:flex;
 flex-flow:column nowrap;
-justify-content:space-evenly;
-padding:20px 40px;
+// justify-content:space-evenly;
+padding:20px 10px;
 // background:blue;
 
 @media(min-width:${size.mobileS})and(max-width:${size.laptop}){
-padding:0;
+// padding:0;
 }
 
 `;
