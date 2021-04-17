@@ -57,10 +57,6 @@ const ServiceOffered = () => {
 
 
 
-    console.log(data);
-
-
-
     return (
         <motion.div
             variants={fadeUp}

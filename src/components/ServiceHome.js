@@ -57,7 +57,6 @@ const ServiceOffered = () => {
 
 
 
-    console.log(data);
 
 
 

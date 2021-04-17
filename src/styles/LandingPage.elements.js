@@ -14,19 +14,13 @@ export const BannerImg = styled.img`
         z-index:5;
 
 
-        @media(max-width:${size.laptop}) and (min-width:${size.tablet}){
+        @media(max-width:${size.laptop}) and (min-width:${size.mobileS}){
 
-        width:700px;
-        height:700px;
+        width:100%;
+        height:auto;
         }
-        @media(max-width:${size.mobileL}) and (min-width:${size.mobileM}){
-        width:400px;
-        height:400px;
-        }
-        @media(max-width:${size.mobileS}){
-            height:300px;
-            width:300px;
-        }
+
+
 `;
 
 export const BlobL = styled.img`
@@ -69,7 +63,7 @@ export const RedMoon = styled.img`
 export const Container = styled.div`
     display:flex;
     flex-flow:row nowrap;
-    justify-content:space-around;
+    justify-content:center;
     padding:100px 0;
     position:relative;
     margin-bottom:100px;
@@ -85,7 +79,7 @@ export const Container = styled.div`
 export const TextWrapper = styled.div`
 display:flex;
 flex-flow:column nowrap;
-// background:blue;
+// background:yellow;
 // padding-top:100px;
 
 
@@ -105,7 +99,7 @@ padding:0 100px 0 100px;
 color: rgba(255, 255, 255, 0.651);
 z-index:2;
 @media(max-width:${size.laptop}) and (min-width:${size.mobileS}){
-    font:normal 900 2.8em/ 1 'Montserrat', sans-serif;
+    font:normal 900 3.8em/ 1 'Montserrat', sans-serif;
     letter-spacing: 1px;
     padding:0;
     margin:0 auto;
